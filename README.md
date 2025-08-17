@@ -1,8 +1,8 @@
-# Session ID - Session Title
+# XP264- Explore how to run cloud-native applications on SAP BTP, Kyma runtime
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2025 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2025 session called XP264 - Explore how to run cloud-native applications on SAP BTP, Kyma runtime.  
 
 ## Overview
 
