@@ -2,16 +2,21 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2025 session called XP264 - **Explore how to run cloud-native applications on SAP BTP, Kyma runtime.**    
+This repository contains the material for the SAP TechEd 2025 session catalog number XP264 - [**Explore how to run cloud-native applications on SAP BTP, Kyma runtime.**](https://www.sap.com/events/teched/berlin/flow/sap/te25/catalog-inperson/page/catalog/session/1749035076180001oik0)  
 
 ## Overview
 
 This session introduces attendees to SAP BTP, Kyma runtime - a flexible and easy way to connect and extend enterprise applications in the cloud-native world.  
 **Kyma** as of such, part of [Kyma project](https://github.com/kyma-project), is an opinionated set of Kubernetes-based modular building blocks (modules) that provide all the necessary capabilities to develop and run enterprise-grade cloud-native applications.
 
+Learn how to run applications on the Kyma runtime for SAP BTP and discover the power of smooth integration with cloud applications and on-premise systems using advanced connectivity features.  
+Explore operational best practices from mastering troubleshooting techniques and intelligent root-cause analysis to event-driven autoscaling that adapts to your business needs in real time.
+
 ## Requirements
 
 The requirements to follow the exercises in this repository are...
+
+  * You need to have a GitHub user. If you don't have one so far, please sign-up on GitHub before going through the exercises
 
 ## Exercises
 
