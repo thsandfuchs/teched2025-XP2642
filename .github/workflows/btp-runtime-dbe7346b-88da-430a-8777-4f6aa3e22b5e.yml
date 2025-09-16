@@ -15,26 +15,66 @@
         kubectl get nodes
         kubectl get pod -A
         kubectl get -n kyma-system kymas default -o json | jq '.spec.modules[] '
-
+        kubectl get cm/shoot-info -n kube-system -o json | jq .data
+        kubectl get openidconnect
+        kubectl get cm/kyma-provisioning-info -n kyma-system -ojsonpath='{.data.details}'
+    - "name": "kyma cli 3.0.1"
+      "run": |
         echo "Installing kyma cli..."
         curl -sSL "https://github.com/kyma-project/cli/releases/download/3.0.1/kyma_Linux_x86_64.tar.gz" |  tar -xzv kyma
         ./kyma alpha --help
-
         echo "List of modules"
         ./kyma alpha module list
-
         ./kyma alpha kubeconfig generate --serviceaccount kyma-cli-sa --clusterrole cluster-admin --namespace default --permanent > kyma-cli-sa.yaml
 
         echo "List of modules with  kyma-cli-sa"
         ./kyma alpha module list --kubeconfig ./kyma-cli-sa.yaml
+        echo "deploy a docker image and expose it via an API Rule v2"
 
-        echo "deploy a docker image and expose it via an API Rule v2"   
-        #kubectl delete deployment httpbin-app --ignore-not-found=true --grace-period=10
-        #kubectl delete service httpbin-app --ignore-not-found=true
-        
         kubectl delete all -l app.kubernetes.io/name=httpbin-app
         ./kyma alpha app push --name httpbin-app --image kennethreitz/httpbin --istio-inject true --expose --container-port 80
+    - "name": "kyma cli 3.1.0"
+      "run": |
+        echo "Installing kyma cli..."
+        curl -sSL "https://github.com/kyma-project/cli/releases/download/3.1.0/kyma_Linux_x86_64.tar.gz" |  tar -xzv kyma
+        ./kyma --help
+        ./kyma alpha --help
+        echo "List of modules"
+        ./kyma module list
+        ./kyma alpha kubeconfig generate --serviceaccount kyma-cli-sa --clusterrole cluster-admin --namespace default --permanent > kyma-cli-sa.yaml
 
+        echo "List of modules with  kyma-cli-sa"
+        ./kyma module list --kubeconfig ./kyma-cli-sa.yaml
+        echo "deploy a docker image and expose it via an API Rule v2"
+
+        kubectl delete all -l app.kubernetes.io/name=httpbin-app
+        ./kyma app push --name httpbin-app --image kennethreitz/httpbin --istio-inject true --expose --container-port 80
+    - "name": "Community Modules Support"
+      "run": |
+        echo "discover/add available community-driven modules..."
+
+        ./kyma module catalog
+    - "name": "kyma-oidc-0 (https://dashboard.kyma.cloud.sap/cluster)"
+      "run": |
+        echo "generate kubeconfig files..."
+
+        ./kyma alpha kubeconfig generate --oidc-name kyma-oidc-0 --output=./kymacanary-oidc.yaml
+
+        cat ./kymacanary-oidc.yaml
+    - "name": "kymacanary-oidc (https://dashboard.kyma.cloud.sap/cluster)"
+      "run": |
+        echo "generate kubeconfig files..."
+
+        ./kyma alpha kubeconfig generate --oidc-name kymacanary-oidc --output=./kymacanary-oidc.yaml
+
+        cat ./kymacanary-oidc.yaml
+    - "name": "kymaprod-oidc (https://dashboard.kyma.cloud.sap/cluster)"
+      "run": |
+        echo "generate kubeconfig files..."
+
+        ./kyma alpha kubeconfig generate --oidc-name kymaprod-oidc --output=./kymaprod-oidc.yaml
+
+        cat ./kymaprod-oidc.yaml
 
 "name": "btp-runtime-dbe7346b-88da-430a-8777-4f6aa3e22b5e"
 "on":
