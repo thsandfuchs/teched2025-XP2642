@@ -49,6 +49,20 @@
 
         kubectl delete all -l app.kubernetes.io/name=httpbin-app
         ./kyma app push --name httpbin-app --image kennethreitz/httpbin --istio-inject true --expose --container-port 80
+    - "name": "kyma nodejs functions"
+      "run": |
+        echo "discover kyma serverless functions on-the-go..."
+        ./kyma function init nodejs test-function
+        ls -la
+        ./kyma function create nodejs test-fn -v 20 --source ./handler.js --dependencies ./package.json
+        kubectl get functions
+
+    - "name": "kyma python functions"
+      "run": |
+        echo "discover kyma serverless functions on-the-go..."
+        ./kyma function create python test-py-fn
+        kubectl get functions
+
     - "name": "Community Modules Support"
       "run": |
         echo "discover/add available community-driven modules..."
