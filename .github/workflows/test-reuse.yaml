@@ -63,7 +63,7 @@
         echo "Additionally, httpbin-$NAMESPACE app has been made available under the custom domain at: $URL"
 "name": "test-reuse"
 "on":
-  "workflow_call:"
+  "workflow_call":
     "inputs":
       "NAMESPACE":
         "description": "students namespace"
