@@ -12,8 +12,14 @@ jobs:
     strategy:
       matrix:
         namespace: [xp264-001, xp264-002]
+    # https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#example-using-a-public-action-in-a-subdirectory
+    # https://stackoverflow.com/questions/75733616/github-actions-how-to-call-a-reusable-workflow-as-a-step    
     steps:
-      - uses: SAP-samples/teched2025-XP264/.github/workflows/xp264-000-teched-622af3fe-a2f5-4fdd-a05f-73e343aec2a5-xp264.yml@main
+      - name: check out repository
+        uses: actions/checkout@v5
+      # This step references the directory that contains the local action.
+      - name: Use local xp264 action
+      - uses: .github/workflows/xp264-000-teched-622af3fe-a2f5-4fdd-a05f-73e343aec2a5-xp264.yml
         with:
           NAMESPACE: ${{ matrix.namespace }}
       #secrets: inherit
