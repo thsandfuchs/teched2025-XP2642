@@ -63,7 +63,8 @@
         echo "deploy a docker image and expose it via an API Rule v2"
 
         kubectl delete all -l app.kubernetes.io/name=httpbin-app
-        URL=$(./kyma app push --name httpbin-app --image kennethreitz/httpbin --istio-inject true --expose --container-port 80 --quiet)
+        HOST=$(./kyma app push --name httpbin-app --image kennethreitz/httpbin --istio-inject true --expose --container-port 80 --quiet)
+        URL="https://$HOST"
         echo $URL
     - "name": "Diagnose cluster health and configuration."
       "run": |
