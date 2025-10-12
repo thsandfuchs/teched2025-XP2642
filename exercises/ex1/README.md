@@ -108,9 +108,9 @@ response->set_text( |Hello World! | ).
 
 
 
-## Exercise 1.2 Getting acquainted with your kyma cluster
+## Exercise 1.2 - Getting acquainted with your kyma cluster
 
-
+Let's leverage the kyma cli to get simple metadata
 
 ```
 kyma alpha diagnose -f json | jq '.metadata'
@@ -140,6 +140,10 @@ kyma alpha diagnose -f json | jq '.metadata'
   "kubeAPIServer": "https://api.a416537.stage.kyma.ondemand.com"
 }
 ```
+
+  * Let's use the above information to build the deep link to the BTP subaccount with the kyma runtime environment.  
+  * Use the link to inspect the BTP side of the kyma house....
+  * Scramble the kyma runtime environment with the BTP Provisioning Service REST APIs
 
 ```
 kyma alpha diagnose -f json | jq '.nodes[] | tojson'
