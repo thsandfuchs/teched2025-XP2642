@@ -129,9 +129,9 @@ Easy navigation with the session landscape site:
 </tbody>
 </table>   
 
+## Exercise 0.3 - Solution brief. Funtional architecture
 
-
-Functional architecture
+Here goes a diagram of the functional architecture of the solution
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
 <tbody>
