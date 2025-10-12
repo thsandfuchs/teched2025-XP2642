@@ -143,6 +143,7 @@ kyma alpha diagnose -f json | jq '.metadata'
 
   * Let's use the above information to build the deep link to the BTP subaccount with the kyma runtime environment.  
   * Use the link to inspect the BTP side of the kyma house....
+  * Goto the [landscape dashboard](https://url.sap/3kf0ol) and choose the right environment...
   * Scramble the kyma runtime environment with the BTP Provisioning Service REST APIs
 
 ```
