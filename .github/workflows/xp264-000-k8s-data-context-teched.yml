@@ -63,12 +63,6 @@ env:
     "steps":
     - "name": "Check out Git repository"
       "uses": "actions/checkout@v4"
-    - name: Get short-lived GitHub-issued JWT
-      id: get-github-jwt
-      run: |
-        githubJwt=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" -H "Accept: application/json; api-version=2.0" -H "Content-Type: application/json" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://${{ github.event.inputs.IDP }}" | jq -r '.value')
-        echo $githubJwt | jq -R 'split(".") | .[0],.[1] | @base64d | fromjson'
-        echo "githubJwt=$githubJwt" >> $GITHUB_OUTPUT
     - "name": "Install Helm"
       "uses": "azure/setup-helm@v4"
     - "name": "Setup Kube Context"
@@ -87,6 +81,13 @@ env:
         kubectl version
         kubectl config view
       
+    - name: Get short-lived GitHub-issued JWT
+      id: get-github-jwt
+      run: |
+        githubJwt=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" -H "Accept: application/json; api-version=2.0" -H "Content-Type: application/json" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://${{ github.event.inputs.IDP }}" | jq -r '.value')
+        echo $githubJwt | jq -R 'split(".") | .[0],.[1] | @base64d | fromjson'
+        echo "githubJwt=$githubJwt" >> $GITHUB_OUTPUT
+
     - name: Setup Terraform
       id : setup_terraform
       uses: hashicorp/setup-terraform@v3
