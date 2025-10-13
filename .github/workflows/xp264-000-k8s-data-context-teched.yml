@@ -18,7 +18,7 @@ on:
           - "anuk8cmfw.accounts.ondemand.com"
 
       subaccount_name:
-        description: "subaccount name prefix"
+        description: "subaccount (region) name prefix"
         required: true
         default: "xp264-000"
         type: "choice"
@@ -101,11 +101,14 @@ env:
       "run": |
 
         #echo $KUBECONFIG
-        ls -al $KUBECONFIG
         #cat  $KUBECONFIG
+        ls -al $KUBECONFIG
+
 
         kubectl version
         kubectl config view
+        kubectl config get-clusters
+        ls -la ~/.kube/config
 
     - "name": "install kyma cli"
       uses: kyma-project/setup-kyma-cli@v1
