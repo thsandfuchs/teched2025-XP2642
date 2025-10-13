@@ -137,11 +137,11 @@ env:
         cat $KUBECONFIG
 
         # https://able8.medium.com/how-to-merge-multiple-kubeconfig-files-into-one-36fc987c2e2f
-        kubectl config get-clusters --kubeconfig all-in-one-kubeconfig.yaml
-        kubectl config get-contexts --kubeconfig all-in-one-kubeconfig.yaml
+        kubectl config get-clusters #--kubeconfig all-in-one-kubeconfig.yaml
+        kubectl config get-contexts #--kubeconfig all-in-one-kubeconfig.yaml
 
-        kubectl config use-context garden-kyma--c-4d2de7e-external --kubeconfig all-in-one-kubeconfig.yaml
-        kubectl config current-context --kubeconfig all-in-one-kubeconfig.yaml
+        kubectl config use-context garden-kyma--c-4d2de7e-external #--kubeconfig all-in-one-kubeconfig.yaml
+        kubectl config current-context #--kubeconfig all-in-one-kubeconfig.yaml
 
     - "name": "install kyma cli"
       uses: kyma-project/setup-kyma-cli@v1
