@@ -263,7 +263,8 @@ env:
 
         kubeconfig_sa=$(terraform -chdir=${{ env.PATH_TO_TFSCRIPT }} output -raw kubeconfig-sa)
         terraform -chdir=${{ env.PATH_TO_TFSCRIPT }} output -json kyma_parameters > ./tf_output.json
-        kyma_parameters=$(terraform -chdir=${{ env.PATH_TO_TFSCRIPT }} output -json kyma_parameters | jq -R)
+        #kyma_parameters=$(terraform -chdir=${{ env.PATH_TO_TFSCRIPT }} output -json kyma_parameters | jq -R)
+        kyma_parameters=$(terraform -chdir=${{ env.PATH_TO_TFSCRIPT }} output kyma_parameters)
         echo $kyma_parameters
         echo "kyma_parameters=$kyma_parameters" >> $GITHUB_OUTPUT
 
