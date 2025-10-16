@@ -54,12 +54,12 @@
 
         echo "deploy a docker image and expose it via an API Rule v2"
         kubectl delete all -l app.kubernetes.io/name=httpbin-$NAMESPACE -n $NAMESPACE
-        ./kyma app push --name httpbin-$NAMESPACE --image kennethreitz/httpbin --istio-inject true --expose --quiet --container-port 80 --namespace $NAMESPACE
-
-        echo -e "\nAdding APIRules to other custom domains"
-        HOSTNAME=$(kubectl get dnsentries -A  -o json | jq -n -r --arg namespace "$NAMESPACE" 'inputs | .items[].spec.dnsName  | select(contains("btp-quovadis")) | select(contains("kyma.dev.sap")) | split("*") | join("httpbin-\($namespace)")' )
+        HOSTNAME=$(./kyma app push --name httpbin-$NAMESPACE --image kennethreitz/httpbin --istio-inject true --expose --quiet --container-port 80 --namespace $NAMESPACE )
         HTTPBIN_URL=https://$HOSTNAME
         echo -e "$HTTPBIN_URL\n"
+
+        echo -e "\nAdding APIRules to other custom domains\n"
+        HOSTNAME=$(kubectl get dnsentries -A  -o json | jq -n -r --arg namespace "$NAMESPACE" 'inputs | .items[].spec.dnsName  | select(contains("btp-quovadis")) | select(contains("kyma.dev.sap")) | split("*") | join("httpbin-\($namespace)")' )
 
         kubectl get apirules -ojson -n $NAMESPACE  | jq '.items[] '  | jq 'del(.metadata["annotations","labels","creationTimestamp","resourceVersion","uid", "selfLink", "ownerReferences", "generation"], .status)' |  jq --arg namespace "$NAMESPACE" '.metadata |= . + {"name": "httpbin-\($namespace)-01" }' | jq --arg hostname "$HOSTNAME" '.spec |= . + {"gateway": "aws-route53-dns/quovadis-aws-route53-dns-gateway", "hosts": ["\($hostname)"] } ' | kubectl apply -n $NAMESPACE -f -
         HTTPBIN_URL=$(kubectl get dnsentries -A  -o json | jq -n -r --arg namespace "$NAMESPACE" 'inputs | .items[].spec.dnsName  | select(contains("btp-quovadis")) | select(contains("kyma.dev.sap")) | split("*") | join("https://httpbin-\($namespace)")' )
@@ -75,7 +75,7 @@
         # for f in {1..10}; do curl https://${HTTPBIN_HOST}/headers; done
 
         for f in {1..10}; do curl ${{ steps.HTTPBIN_URL.outputs.HTTPBIN_URL }}/headers; done
-        echo "You can now check the logs, metrics and traces in SAP Cloud Logging"
+        echo -e "You can now check the logs, metrics and traces in SAP Cloud Logging:\nhttps://url.sap/rw43o5"
 
 
 "name": "xp264-050-67debbc5-8d77-41ca-acba-7443e0a413ba-xp264"
