@@ -61,21 +61,6 @@ env:
     - "name": "Check out Git repository"
       "uses": "actions/checkout@v4"
 
-    - name: Get short-lived GitHub-issued JWT
-      id: get-github-jwt
-      run: |
-        #githubJwt=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" -H "Accept: application/json; api-version=2.0" -H "Content-Type: application/json" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://${{ github.event.inputs.IDP }}" | jq -r '.')
-        #echo $githubJwt | base64
-        githubJwt=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" -H "Accept: application/json; api-version=2.0" -H "Content-Type: application/json" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://${{ github.event.inputs.IDP }}" | jq -r '.value')
-
-        EXP_TS=$(echo $githubJwt | jq -R 'split(".") | .[1] | @base64d | fromjson | .exp')
-        echo $EXP_TS
-        EXP_DATE=$(date -d @$EXP_TS --iso-8601=seconds)
-        echo $EXP_DATE
-
-        echo $githubJwt | jq -R 'split(".") | .[0],.[1] | @base64d | fromjson'
-        echo "githubJwt=$githubJwt" >> $GITHUB_OUTPUT
-
     - "name": "Install Helm"
       "uses": "azure/setup-helm@v4"
     - "name": "Setup Kube Context - xp264-000"
@@ -86,10 +71,10 @@ env:
         "method": "kubeconfig"
     - "name": "check permissions"
       "run": |
-        kubectl version
-        kubectl config get-clusters
         cp $KUBECONFIG ./xp264-000.yaml
         cat ./xp264-000.yaml
+        kubectl version
+        kubectl config get-clusters
 
     - "name": "Setup Kube Context - japanese-east"
       "uses": "azure/k8s-set-context@v4"
@@ -99,10 +84,10 @@ env:
         "method": "kubeconfig"
     - "name": "check permissions"
       "run": |
-        kubectl version
-        kubectl config get-clusters
         cp $KUBECONFIG ./japanese-east.yaml
         cat ./japanese-east.yaml
+        kubectl version
+        kubectl config get-clusters
 
     - "name": "Setup Kube Context - us-east"
       "uses": "azure/k8s-set-context@v4"
@@ -112,10 +97,10 @@ env:
         "method": "kubeconfig"
     - "name": "check permissions"
       "run": |
-        kubectl version
-        kubectl config get-clusters
         cp $KUBECONFIG ./us-east.yaml
         cat ./us-east.yaml
+        kubectl version
+        kubectl config get-clusters
 
     - "name": "Setup Kube Context - uk-south"
       "uses": "azure/k8s-set-context@v4"
@@ -125,10 +110,10 @@ env:
         "method": "kubeconfig"
     - "name": "check permissions"
       "run": |
-        kubectl version
-        kubectl config get-clusters
         cp $KUBECONFIG ./uk-south.yaml
         cat ./uk-south.yaml
+        kubectl version
+        kubectl config get-clusters
 
     - "name": "Setup Kube Context - uk-xp264"
       "uses": "azure/k8s-set-context@v4"
@@ -139,10 +124,12 @@ env:
 
     - "name": "check permissions"
       "run": |
+        cp $KUBECONFIG ./uk-xp264.yaml
+
         kubectl version
         kubectl config view
         kubectl config get-clusters
-        cp $KUBECONFIG ./uk-xp264.yaml
+
         export TOTO=$KUBECONFIG
 
         # https://able8.medium.com/how-to-merge-multiple-kubeconfig-files-into-one-36fc987c2e2f
@@ -186,6 +173,21 @@ env:
         echo $GLOBALACCOUNT
 
         echo "GLOBALACCOUNT=$GLOBALACCOUNT" >> $GITHUB_OUTPUT
+
+    - name: Get short-lived GitHub-issued JWT
+      id: get-github-jwt
+      run: |
+        #githubJwt=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" -H "Accept: application/json; api-version=2.0" -H "Content-Type: application/json" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://${{ github.event.inputs.IDP }}" | jq -r '.')
+        #echo $githubJwt | base64
+        githubJwt=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" -H "Accept: application/json; api-version=2.0" -H "Content-Type: application/json" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://${{ github.event.inputs.IDP }}" | jq -r '.value')
+
+        EXP_TS=$(echo $githubJwt | jq -R 'split(".") | .[1] | @base64d | fromjson | .exp')
+        echo $EXP_TS
+        EXP_DATE=$(date -d @$EXP_TS --iso-8601=seconds)
+        echo $EXP_DATE
+
+        echo $githubJwt | jq -R 'split(".") | .[0],.[1] | @base64d | fromjson'
+        echo "githubJwt=$githubJwt" >> $GITHUB_OUTPUT
           
     - name: Setup Terraform
       id : setup_terraform
