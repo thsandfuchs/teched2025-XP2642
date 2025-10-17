@@ -35,7 +35,7 @@
                 - "-c"
                 - |
                   set -e -o pipefail
-                  OIDC_URL_WITH_AUDIENCE="$ACTIONS_ID_TOKEN_REQUEST_URL&audience=gh-teched-622af3fe-a2f5-4fdd-a05f-73e343aec2a5-${{ github.event.inputs.NAMESPACE }}"
+                  OIDC_URL_WITH_AUDIENCE="$ACTIONS_ID_TOKEN_REQUEST_URL&audience=gh-teched-622af3fe-a2f5-4fdd-a05f-73e343aec2a5"
                   IDTOKEN=$(curl -sS \
                     -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
                     -H "Accept: application/json; api-version=2.0" \
