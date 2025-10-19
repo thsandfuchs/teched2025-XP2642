@@ -121,6 +121,7 @@ resource "btp_subaccount_role_collection_assignment" "subaccount_custom_idp_grou
 }
 
 
+
 locals {
   custom_domain     = var.BTP_CUSTOM_IDP
   identity_provider = local.custom_domain
@@ -147,11 +148,30 @@ data "btp_subaccount_trust_configuration" "custom_idp" {
 }
 
 
+#
+
+# look up services offerings available on sapbtp environment in a given subaccount
+data "btp_subaccount_service_offerings" "sapbtp" {
+  subaccount_id = data.btp_subaccount.context.id
+  environment   = "sapbtp"
+}
+
+resource "time_sleep" "subscription_propagation" {
+  create_duration = "120s"
+
+  triggers = {
+    # This sets up a proper dependency on the faas-app-xp264-049-saas subscription association
+    subscription = [ for service in data.btp_subaccount_service_offerings.sapbtp.values: service.catalog_name if service.catalog_name == "faas-app-xp264-049-saas" ]
+
+  }
+}
+
+
 resource "btp_subaccount_subscription" "faas-xp264-mt" {
   depends_on    = [btp_subaccount_trust_configuration.custom_idp]
 
   subaccount_id = data.btp_subaccount.context.id
-  app_name      = "faas-app-xp264-049-saas"
+  app_name      = time_sleep.subscription_propagation.triggers["subscription"] // "faas-app-xp264-049-saas"
   plan_name     = "default"
   //parameters    = jsonencode({})
   timeouts = {
