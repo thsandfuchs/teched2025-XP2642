@@ -17,6 +17,11 @@ output "btp_subaccounts_filtered" {
   value = data.btp_subaccounts.filtered.values 
 }
 
+output "btp_subaccount_id" {
+  value = try(data.btp_subaccounts.filtered.values[0].id, "")
+}
+
+/*
 data "btp_subaccount" "context" {
   id = try(data.btp_subaccounts.filtered.values[0].id, "")
 }
@@ -59,4 +64,5 @@ output "faas_xp264_mt" {
 output "faas_xp264_mt_subscription_url" {
   value = data.btp_subaccount_subscription.faas_xp264_mt.subscription_url
 }
+*/
 
