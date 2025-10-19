@@ -53,6 +53,6 @@ data "btp_subaccount_subscription" "faas_xp264_mt" {
 
 
 output "faas_xp264_mt_subscription_url" {
-  value = btp_subaccount_subscription.faas_xp264_mt.subscription_url
+  value = data.btp_subaccount_subscription.faas_xp264_mt.subscription_url
 }
 
