@@ -164,8 +164,8 @@ data "btp_subaccount_subscriptions" "all" {
   subaccount_id = data.btp_subaccount.context.id
 }
 
-output "subscriptions_all" {
-  value = data.btp_subaccount_subscriptions.all.values
+output "faas-app-xp264-049-saas" {
+  value = [ for s in data.btp_subaccount_subscriptions.all.values: s if s.app_name == "faas-app-xp264-049-saas" ]
 }
 
 
@@ -192,7 +192,7 @@ resource "btp_subaccount_subscription" "faas-xp264-mt" {
 
   subaccount_id = data.btp_subaccount.context.id
   app_name      = one(time_sleep.subscription_propagation[*].triggers["subscription"]) // "faas-app-xp264-049-saas"
-  plan_name     = "default"
+  plan_name     = ""
   //parameters    = jsonencode({})
   timeouts = {
     create = "25m"

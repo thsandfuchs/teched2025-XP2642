@@ -2,6 +2,6 @@ output "sapbtp" {
  value = module.mt_context.sapbtp
 }
 
-output "subscriptions_all" {
-  value = module.mt_context.subscriptions_all
+output "faas-app-xp264-049-saas" {
+  value = module.mt_context.faas-app-xp264-049-saas
 }
