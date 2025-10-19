@@ -72,8 +72,7 @@ resource "btp_subaccount_role_collection_assignment" "subaccount_platform_idp_gr
 
   depends_on           = [btp_subaccount_trust_configuration.custom_idp]
 
-//  for_each             = length(local.platform_trust_origin) != 0 ? toset( "${var.admin_groups}" ) : toset([])
-  for_each             = toset( "${var.admin_groups}" )
+  for_each             = var.subaccount_id == "" ? toset( "${var.admin_groups}" ) : toset([])
   subaccount_id        = data.btp_subaccount.context.id
   role_collection_name = "Subaccount Administrator"
   group_name           = each.value
@@ -90,7 +89,7 @@ resource "btp_subaccount_role_collection_assignment" "subaccount_custom_idp_grou
   subaccount_id        = data.btp_subaccount.context.id
   role_collection_name = "faas-xp264-049_hc-faas"
   group_name            = each.value
-  origin               = btp_subaccount_trust_configuration.custom_idp.origin
+  origin               = one(btp_subaccount_trust_configuration.custom_idp[*].origin)
 }
 
 
@@ -101,6 +100,7 @@ locals {
 }
 
 resource "btp_subaccount_trust_configuration" "custom_idp" {
+  count             = var.subaccount_id == "" ? 1 : 0
 
   subaccount_id     = data.btp_subaccount.context.id
   identity_provider = local.identity_provider
@@ -114,15 +114,17 @@ resource "btp_subaccount_trust_configuration" "custom_idp" {
 # custom identity provider
 #
 data "btp_subaccount_trust_configuration" "custom_idp" {
+  count         = var.subaccount_id == "" ? 1 : 0
   depends_on    = [btp_subaccount_trust_configuration.custom_idp]
 
   subaccount_id = data.btp_subaccount.context.id
-  origin        = btp_subaccount_trust_configuration.custom_idp.origin
+  origin        = one(btp_subaccount_trust_configuration.custom_idp[*].origin)
 }
 
 
 
 resource "btp_subaccount_security_settings" "sec_setting" {
+  count                                    = var.subaccount_id == "" ? 1 : 0
   subaccount_id                            = data.btp_subaccount.context.id
 
   default_identity_provider                = "sap.custom"
