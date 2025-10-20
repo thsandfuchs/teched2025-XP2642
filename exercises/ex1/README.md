@@ -48,7 +48,7 @@ Option 1.
   Access SAP Kyma dashboard.  
   You can use the easy navigation landscape dashboard with your allocated student's user name or use one of the kyma dashboard deep links below:
 
- | kyma region | KubeconfigURL (download) | Console URL (dashboard) | QRcode | Admin Github Action
+ | <div style="width: 130px;">region</div>  | KubeconfigURL (download) | Console URL (dashboard) | QRcode | Admin Github Action
  | :--------- | ---------  | --------- | --------- | ---------:
  | [uk-south](https://emea.cockpit.btp.cloud.sap/cockpit?idp=anuk8cmfw.accounts.ondemand.com#/globalaccount/c1f19148-71f7-4883-9f86-8d5ee7634dec/subaccount/4457fb7f-3296-40cf-b66b-aac3d9d4a2b2{:target="_blank"}) | https://kyma-env-broker.cp.kyma.cloud.sap/kubeconfig/6D0AF763-179E-4F84-8ED0-724B3C0C2C92 | https://dashboard.kyma.cloud.sap/?kubeconfigID=6D0AF763-179E-4F84-8ED0-724B3C0C2C92 | ![](../landscape/uksouth/kyma-dashboard_url_uksouth.png) | [uk-south--admin](../../../../actions/workflows/uk-south-teched-7a69075f-7faf-4604-a62e-806648791dba.yml)
  | [japan-east](https://emea.cockpit.btp.cloud.sap/cockpit?idp=anuk8cmfw.accounts.ondemand.com#/globalaccount/c1f19148-71f7-4883-9f86-8d5ee7634dec/subaccount/cae18034-657b-478d-89f7-b802b8111cd0) | https://kyma-env-broker.cp.kyma.cloud.sap/kubeconfig/79EB720B-2C16-4A7E-AA7F-108C4E3B7E98 | https://dashboard.kyma.cloud.sap/?kubeconfigID=79EB720B-2C16-4A7E-AA7F-108C4E3B7E98 | ![](../landscape/japaneast/kyma_dashboard_url_japaneast.png) | [japan-east--admin](../../../../actions/workflows/japan-east-teched-2a6fe480-ac84-4751-ad37-56ec2a493932.yml)
