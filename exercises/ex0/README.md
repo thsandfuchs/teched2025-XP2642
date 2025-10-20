@@ -97,7 +97,7 @@ Each student's runtime context has a preconfigured SAP Cloud Connector attached,
 </table>   
  
 
-Easy navigation with the session landscape site:  
+Easy navigation with the session landscape site with your allocated student's user name:  
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
 <tbody>

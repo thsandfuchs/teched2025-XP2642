@@ -43,9 +43,22 @@ After completing these steps you will have created...
 
 Option 1. 
 
-  * Download the OIDC kubeconfig from the kyma dashboard. 
-  This method requires a kubectl oidc plugin installed and connot be performed from a headless context
+  * Download the OIDC kubeconfig from the kyma dashboard.  
 
+  This method requires a kubectl oidc plugin installed and cannot be performed from a headless context.  
+  Easy navigation with the session landscape site with your allocated student's user name:  
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
+<h1><a href="https://url.sap/3kf0ol"><img class="aligncenter" src="../ex0/images/site_navigation.png" alt="" height="600"/></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table>   
 
   * Create a permenent or temporary service account based kubeconfig 
 ```
@@ -98,8 +111,8 @@ kyma alpha kubeconfig generate --serviceaccount kyma-cli-view-sa  --namespace de
 kyma alpha kubeconfig generate --serviceaccount xp264-000-sa  --namespace xp264-000 --permanent --clusterrole view --cluster-wide --kubeconfig ~/.kube/kubeconfig--garden-kyma--a896778-external.yaml
 ```  
 
-1. Click here.
-<br>![](/exercises/ex1/images/01_01_0010.png)
+
+
 
 2.	Insert this line of code.
 ```abap
