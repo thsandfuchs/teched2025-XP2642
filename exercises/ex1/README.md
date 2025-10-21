@@ -289,9 +289,9 @@ Run the following github action:
 
 ## Exercise 1.6 - BTP multitenancy with kyma
 
+In order to subscribe or to retrieve an existingg subscription run the following github action: 
 
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
+
 
 
 ## Summary
