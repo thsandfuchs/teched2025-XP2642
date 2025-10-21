@@ -1,6 +1,10 @@
-# Exercise 1 - Getting acquainted with SAP BTP, Kyma Runtime
+# Exercise 1 - First things first. Getting acquainted with SAP BTP, Kyma Runtime (SKR)
 
-## Architecture diagram 
+
+## Exercise 1.0 - Getting to know SAP BTP, Kyma Runtime  architecture
+
+
+  * Architecture diagram 
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
 <tbody>
@@ -14,7 +18,25 @@
 </tbody>
 </table> 
 
-## Exercise 1.0 - Discover Kyma CLI
+
+## Exercise 1.1 - Easy access to your teched landscape.
+
+
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
+<h1><a href="https://url.sap/3kf0ol"><img class="aligncenter" src="../ex0/images/site_navigation.png" alt="" height="600"/></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table>   
+
+
+## Exercise 1.2 - Discover Kyma CLI
 
 Quoting after [Kyma CLI | SAP Help](https://help.sap.com/docs/btp/sap-business-technology-platform/kyma-cli):  
 
@@ -53,7 +75,7 @@ Use "kyma [command] --help" for more information about a command.
 
 Please get familiar with the available [commands](https://github.com/kyma-project/cli/tree/3.2.0/docs/user/gen-docs)... 
 
-## Exercise 1.1 - Fire-fighter access to your kyma cluster
+## Exercise 1.3 - Fire-fighter access to your kyma cluster
 
 
   * Download the OIDC kubeconfig from the kyma dashboard.  
@@ -65,17 +87,6 @@ Please get familiar with the available [commands](https://github.com/kyma-projec
 
 
 
-<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
-<tbody>
-<tr style="height: 193px;">
-<td style="width: 71.6%; height: 193px;">
-<div>
-<h1><a href="https://url.sap/3kf0ol"><img class="aligncenter" src="../ex0/images/site_navigation.png" alt="" height="600"/></a></h1>
-</div>
-</td>
-</tr>
-</tbody>
-</table>   
 
 
   * Here goes the table with the links to all btp and k8s resources...  
@@ -151,7 +162,7 @@ response->set_text( |Hello World! | ).
 
 
 
-## Exercise 1.2 - Getting to know your kyma cluster meatadata
+## Exercise 1.4 - Getting to know your kyma cluster meatadata
 
 Let's leverage the kyma cli to get simple metadata
 
