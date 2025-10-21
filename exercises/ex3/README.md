@@ -1,4 +1,4 @@
-# Exercise 3: Exploring Kyma Telemetry with SAP Cloud Logging
+# Exercise 3 - Exploring Kyma Telemetry with SAP Cloud Logging
 
 ## Simulate some load
 
