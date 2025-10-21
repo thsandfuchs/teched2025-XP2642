@@ -95,7 +95,7 @@ There are some pre-defined dashboards available in SAP Cloud Logging. Let's expl
 <tr style="height: 193px;">
 <td style="width: 71.6%; height: 193px;">
 <div>
-<h1><a href=""><img class="aligncenter" src="./assets/telemetry-cls-kyma-overview.png" alt="overview" height="600"/></a></h1>
+<h1><a href=""><img class="aligncenter" src="./assets/telemetry-cls-kyma-overview.png" alt="overview" /></a></h1>
 </div>
 </td>
 </tr>
@@ -138,9 +138,48 @@ There are some pre-defined dashboards available in SAP Cloud Logging. Let's expl
 
 - Select `Traces` from the left menu
   ![traces](./assets/telemetry-cls-traces-0.png)
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
+<h1><a href=""><img class="aligncenter" src="./assets/telemetry-cls-traces-0.png" alt="traces" /></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table>   
+
 - Select one of the traces to see the details
   ![trace-details](./assets/telemetry-cls-traces-1.png)
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
+<h1><a href=""><img class="aligncenter" src="./assets/telemetry-cls-traces-1.png" alt="trace-details" /></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table>   
+
 - The Trace view shows the request flow from istio ingress gateway to the Httpbin application
   ![trace-flow](./assets/telemetry-cls-traces-2.png)
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
+<h1><a href=""><img class="aligncenter" src="./assets/telemetry-cls-traces-2.png" alt="trace-flow" /></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table>   
+
   >Note: Some Trace spans may be jumbled up
 - Feel free to explore further
