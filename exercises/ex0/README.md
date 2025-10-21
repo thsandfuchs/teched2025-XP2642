@@ -47,12 +47,13 @@ This step is optional and you can be use instead any existing personal GitHub ac
  - Choose **Create Fork**. You are now brought to a copy of the repository in your GitHub account.
  - Choose **Activate Github Action**
 
-## Exercise 0.2 - Discover SAP-TechEd-XP264 Business Technology Platform landscape
+## Exercise 0.2 - Discover SAP-TechEd25-XP264 Business Technology Platform landscape
 
-- Navigate to the [SAP Business Technology Platform - Cockpit](https://account.hana.ondemand.com/#/home/welcome)
-- Click "Sign In" and enter the for this session provided user credentials
-- After the BPT Cockpit has been loaded, you should see following account structure:
+- SSO to the [SAP-TechEd25-XP264 Business Technology Platform - Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit?idp=anuk8cmfw.accounts.ondemand.com#/globalaccount/c1f19148-71f7-4883-9f86-8d5ee7634dec)
+- Use you student's credentials to login
 
+
+![](./ex0/images/SAPTechEd25XP264.png)
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
 <tbody>
