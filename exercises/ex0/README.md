@@ -45,6 +45,7 @@ This step is optional and you can be use instead any existing personal GitHub ac
 </table>   
 
  - Choose **Create Fork**. You are now brought to a copy of the repository in your GitHub account.
+ - Choose **Activate Github Action**
 
 ## Exercise 0.2 - Discover SAP-TechEd-XP264 Business Technology Platform landscape
 
@@ -97,30 +98,13 @@ Easy navigation with the session landscape site with your allocated student's us
 <tr style="height: 193px;">
 <td style="width: 71.6%; height: 193px;">
 <div>
-<h1><a href="https://url.sap/3kf0ol"><img class="aligncenter" src="../ex0/images/site_navigation.png" alt="" height="500"/></a></h1>
+<h1><a href="https://url.sap/3kf0ol"><img class="aligncenter" src="../ex0/images/site_navigation.png" alt="site_navigation" height="800"/></a></h1>
 </div>
 </td>
 </tr>
 </tbody>
 </table>   
 
-
-<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
-<tbody>
-<tr style="height: 193px;">
-<td style="width: 71.6%; height: 193px;">
-<div>
-<h1><a href="https://url.sap/3kf0ol">
-<p float="center">
-  <img src="../ex0/images/site_navigation.png" width="400" height="800"/>
-  <img src="../ex0/images/functional_architecture.png" width="400" height="800"/> 
-</p>
-</a></h1>
-</div>
-</td>
-</tr>
-</tbody>
-</table>   
 
 ## Exercise 0.3 - Solution brief. Funtional architecture
 
