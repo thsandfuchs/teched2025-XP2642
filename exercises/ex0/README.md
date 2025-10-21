@@ -72,16 +72,11 @@ This step is optional and you can be use instead any existing personal GitHub ac
 - Please note the kyma cluster region may be different from the BTP subaccount region.
 
 
-| Account Name              | Type        |                                                                                                                                Description |
-| :------------------------ | :---------: | :------------------------------------------------------------------------------------------------------------------------ |
-| btp-argocd                |  Session Master  | with a shared ArgoCD instance (with SSO for all participants)             |
-| btp-bootstrap             |  Session Master  | XP264 session bootstrap context for the terraform automation. |
-| btp-provider              |  Session Master  | with shared SAP HANA Cloud and Cloud Logging (SAML SSO) services instances.|
 
 
-  * The rules of the game
+### The rules of the game
 
-- The students can pick and choose any available kyma cluster from the following list:
+- The students can pick and choose any available kyma cluster region from the following list:
 
 | Account Name              | Type        |                                                                                                                                Description |
 | :------------------------ | :---------: | :------------------------------------------------------------------------------------------------------------------------ |
@@ -90,9 +85,9 @@ This step is optional and you can be use instead any existing personal GitHub ac
 | japan-east                |  JAPAN EAST region | Students runtime contexts with kyma environment in the japan east region         |
  
 - Each cluster has been configured to the same template with dedicated namespaces for each student.
-- As this is an academic exercise the complete user/namespace isolation has not been enforced 
+- As this is an academic exercise, the complete user/namespace isolation has not been enforced.
 
-Last but not least, all students have accees to the Easy Navigation dashboard, namely
+- Last but not least, all students have accees to the Easy Navigation dashboard, namely
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
 <tbody>
@@ -105,6 +100,16 @@ Last but not least, all students have accees to the Easy Navigation dashboard, n
 </tr>
 </tbody>
 </table>   
+
+
+- The students do not have access to the shared components of the landscape. 
+- Any shared infrascture access is granted from the Easy Navigation dashboard via SSO.
+
+| Account Name              | Type        |                                                                                                                                Description |
+| :------------------------ | :---------: | :------------------------------------------------------------------------------------------------------------------------ |
+| btp-argocd                |  Session Master  | with a shared ArgoCD instance (with SSO for all participants)             |
+| btp-bootstrap             |  Session Master  | XP264 session bootstrap context for the terraform automation. |
+| btp-provider              |  Session Master  | with shared SAP HANA Cloud and Cloud Logging (SAML SSO) services instances.|
 
 
 ## Exercise 0.3 - Solution brief. Funtional architecture
