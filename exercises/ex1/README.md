@@ -381,7 +381,7 @@ Good to know:
 <h1><a href="">
 <p float="left">
   <img src="../ex1/images/subscription-mgmt.png" width="450" height="600"/>
-  <img src="../ex1/images/subscription-mgmt-tenant-details.png" width="450" height="600"/>
+  <img src="../ex1/images/subscription-mgmt-tenant-details.png" width="450" height="800"/>
   <img src="../ex1/images/subscription-mgmt-tenant-dependencies.png" width="450" height="800"/> 
 </p>
 </a></h1>
