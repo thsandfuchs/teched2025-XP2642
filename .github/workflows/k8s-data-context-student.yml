@@ -38,8 +38,6 @@ jobs:
 
     outputs:
       CLUSTER_CONTEXT: ${{ env.CLUSTER_CONTEXT }}
-      cluster_context: ${{ steps.cluster_context.outputs.CLUSTER_CONTEXT }}
-
 
     steps:
     - name: CLUSTER_CONTEXT
