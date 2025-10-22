@@ -221,7 +221,7 @@ kyma alpha kubeconfig generate --serviceaccount xp264-000-sa  --namespace xp264-
 ```  
 
 
-## Exercise 1.5 - Getting to know your kyma cluster
+## Exercise 1.5 - Getting to know your kyma cluster better
 
 Let's leverage the kyma cli to get simple metadata from a kyma cluster
 
