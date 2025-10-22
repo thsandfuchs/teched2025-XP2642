@@ -37,7 +37,7 @@ Some of the modules are added by default (istio, api-gateway and btp-operator), 
 
 ## Exercise 1.1 - Easy access to your teched landscape with SSO.
 
-  * To assist you with the landscape discovery and ease the navigation you may use the following dashboard.  
+  * To assist you with the landscape discovery and ease the navigation you may use the below SAP Workzone dashboard.  
 - Please use your allocated student's credentials to login...
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
@@ -77,8 +77,8 @@ Feel free to add any additional information you might like to retrieve...
 
 
 Good to know:
-- For the best experience, please use the right click to open workflow links into a tab or into a new window.  
-- Diagnostic data collection is done with both Kyma CLI and Terraform providers, namely:
+- For the best experience, please open workflow links into a tab or into a new window (right click).  
+- Diagnostic data collection is done with both Kyma CLI and several Terraform providers, namely:
   * SAP BTP TF provider
   * kubernetes provider 
   * kubectl provider
