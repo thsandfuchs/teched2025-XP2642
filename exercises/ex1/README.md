@@ -78,6 +78,10 @@ Feel free to add any additional information you might like to retrieve...
 
 Good to know:
 - For the best experience, please use the right click to open workflow links into a tab or into a new window.  
+- Diagnostic data collection is done with both Kyma CLI and Terraform providers, namely:
+  * SAP BTP TF provider
+  * kubernetes provider 
+  * kubectl provider
 - The ready made CI/CD workflows are to be manually triggered, for instance:  
   * admin (cluster-wide) and students (namespaced) flows:
 
@@ -100,11 +104,6 @@ Good to know:
 </tr>
 </tbody>
 </table> 
-
-- Diagnostic data collection with both Kyma CLI and Terraform providers, namely:
-- SAP BTP, 
-- kubernetes and 
-- kubectl
 
   * diagnostic data (namespaced) flow
 
