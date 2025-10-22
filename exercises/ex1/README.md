@@ -350,9 +350,46 @@ Good to know:
 - That means students can retrieve and consume the subsciption in whatever tenant they like with their own user login.
 - All the subsciptions can be viewed from the subscription dashboard on the provider side...
 
-- If this happens to be a first time subscription, plese goto the consumer tenant and disable the SAP IDS for user logon, as follows:
+- If this happens to be a first time subscription, plese goto the consumer tenant and disable the SAP IDS for user logon, as depicted below:
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
+<h1><a href="https://dashboard.kyma.cloud.sap/?kubeconfigID=79EB720B-2C16-4A7E-AA7F-108C4E3B7E98">
+<p float="left">
+  <img src="../ex1/images/Default-identity-provider.png" width="450" height="600"/>
+  <img src="../ex1/images/Default-identity-provider-edit.png" width="450" height="600"/>
+  <img src="../ex1/images/Default-identity-provider-save.png" width="450" height="800"/> 
+</p>
+</a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table> 
 
 - Please observe the consumer context is very much empty. The consumer subaccount acts as a service provider ensuring user authentication and permissions validation in order to access the subscription.
+
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
+<h1><a href="https://dashboard.kyma.cloud.sap/?kubeconfigID=79EB720B-2C16-4A7E-AA7F-108C4E3B7E98">
+<p float="left">
+  <img src="../ex1/images/subscription-mgmt.png" width="450" height="600"/>
+  <img src="../ex1/images/subscription-mgmt-details.png" width="450" height="600"/>
+  <img src="../ex1/images/subscription-mgmt-dependencies.png" width="450" height="800"/> 
+</p>
+</a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table> 
 
 ## Summary
 
