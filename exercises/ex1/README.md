@@ -318,10 +318,30 @@ Run the following github action:
 
 In order to subscribe or to retrieve an existing subscription for your user run the following github action: 
 
-Subscription workflow
---------
-[teched-xp264-mt](../../../../actions/workflows/teched-xp264-mt.yml)
+| Runn Subscription workflow | Retrieve the subscription URL
+| -------- | ------------- |
+[teched-xp264-mt](../../../../actions/workflows/teched-xp264-mt.yml) | read the subscription URL in the workflow output
 
+
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
+<h1><a href="https://dashboard.kyma.cloud.sap/?kubeconfigID=79EB720B-2C16-4A7E-AA7F-108C4E3B7E98">
+<p float="left">
+  <img src="../ex1/images/subscription-job.png" width="450" height="600"/>
+  <img src="../ex1/images/subscription-manifest.png" width="450" height="600"/>
+  <img src="../ex1/images/subscription-url.png" width="450" height="800"/> 
+  <img src="../ex1/images/subscribed-app.png" width="450" height="800"/> 
+</p>
+</a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table> 
 
 ## Summary
 
