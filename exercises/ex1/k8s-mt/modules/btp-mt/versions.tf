@@ -12,6 +12,12 @@ terraform {
       source = "salrashid123/http-full"
       version = "1.3.1"
     }        
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+    }  
+    kubectl = {
+      source  = "alekc/kubectl"
+    }
     qrcode = {
       source = "jackivanov/qrcode"
     }

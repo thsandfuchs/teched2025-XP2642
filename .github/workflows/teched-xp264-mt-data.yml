@@ -115,6 +115,7 @@ env:
         export CONFIG_DIRECTORY=${{ env.CONFIG_DIRECTORY }}
         export TF_REGISTRY_CLIENT_TIMEOUT=30s
         export BTP_ASSERTION=${{steps.get-github-jwt.outputs.githubJwt}}
+        export KUBE_CONFIG_PATH=$KUBECONFIG
 
         terraform workspace select -or-create ${{ env.RUNTIME_WORKSPACE }} || echo "Workspace ${{ env.RUNTIME_WORKSPACE }} already exists or cannot be created"
 
@@ -133,6 +134,7 @@ env:
         export TF_WORKSPACE=${{ env.RUNTIME_WORKSPACE }}
         export CONFIG_DIRECTORY=${{ env.CONFIG_DIRECTORY }}
         export TF_REGISTRY_CLIENT_TIMEOUT=30s
+        export KUBE_CONFIG_PATH=$KUBECONFIG
 
         export BTP_ASSERTION=${{steps.get-github-jwt.outputs.githubJwt}}
         export BTP_GLOBAL_ACCOUNT=${{env.GLOBALACCOUNT}}
@@ -156,6 +158,7 @@ env:
         terraform workspace select ${{ env.RUNTIME_WORKSPACE }}
         export TF_WORKSPACE=${{ env.RUNTIME_WORKSPACE }}
         export CONFIG_DIRECTORY=${{ env.CONFIG_DIRECTORY }}
+        export KUBE_CONFIG_PATH=$KUBECONFIG
 
         export BTP_ASSERTION=${{steps.get-github-jwt.outputs.githubJwt}}
         #terraform -chdir=${{ env.PATH_TO_TFSCRIPT }} state list
