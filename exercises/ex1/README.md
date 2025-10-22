@@ -76,7 +76,7 @@ Feel free to add any additional information you might like to retrieve...
 Good to know:
 - For the best experience, please use the right click to open workflow links into a tab or into a new window.  
 - The ready made CI/CD workflows are to be manually triggered, for instance:  
-  * admin and student:
+  * admin (cluster-wide) and students (namespaced) flows:
 
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
@@ -98,7 +98,7 @@ Good to know:
 </tbody>
 </table> 
 
-  * diagnostic data:
+    * diagnostic data (namespaced) flow
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
 <tbody>
@@ -126,7 +126,7 @@ Good to know:
 
 
 Homework:
-- Think to add/amend any additional information you might like to retrieve...
+- Think about nny additional information you might like to add or amend...
 
 ## Exercise 1.3 - Zoom on Kyma CLI
 
