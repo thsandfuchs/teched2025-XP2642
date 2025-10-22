@@ -318,9 +318,9 @@ Run the following github action:
 
 In order to subscribe or to retrieve an existing subscription for your session user (xp264-0xx) run the following github action: 
 
-| Run Subscription workflow | Retrieve the subscription URL
-| -------- | ------------- |
-[teched-xp264-mt](../../../../actions/workflows/teched-xp264-mt.yml) | read the subscription URL in the workflow output
+| Run Subscription workflow | Retrieve the subscription URL | Retrieve the consumer tenant URL
+| -------- | ------------- | ----------
+[teched-xp264-mt](../../../../actions/workflows/teched-xp264-mt.yml) | [subscription URL](https://mt-xp264-000-teched-c3c497ca.b84edf3.kyma.ondemand.com) | [consumer tenant URL](https://emea.cockpit.btp.cloud.sap/cockpit?idp=anuk8cmfw.accounts.ondemand.com#/globalaccount/c1f19148-71f7-4883-9f86-8d5ee7634dec/subaccount/e6d963cc-6dfe-4ba7-a6ab-14765fcae882)
 
 
 
