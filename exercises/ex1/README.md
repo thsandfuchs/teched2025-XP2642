@@ -92,7 +92,9 @@ For instance:
 </table> 
 
 
-
+Good to know: 
+- The automated workflows leverage the dynamic OIDC credentials with Github acting as the IDP provider. 
+- Thus, there is no need to rely on static credentials or 
 
 ## Exercise 1.3 - Zoom on Kyma CLI
 
@@ -100,7 +102,9 @@ Quoting after [Kyma CLI | SAP Help](https://help.sap.com/docs/btp/sap-business-t
 
 > Kyma CLI is an essential tool for application developers who want to get started quickly and efficiently with SAP BTP, Kyma runtime. Designed to streamline workflows, it simplifies complex tasks, enabling developers to deploy and manage applications easily.
 
-Good to know: It is already pre-installed on the tech laptops.  
+Good to know: 
+- It is already pre-installed on the tech laptops.  
+- It is also out-of-the-box in the automation workflows for this session.
 
 ```
 kyma version

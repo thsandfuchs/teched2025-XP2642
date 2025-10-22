@@ -1,4 +1,4 @@
-name: Deploy all namespaces on all clusters
+name: Deploy all namespaces on japan-east cluster
 on:
   workflow_dispatch:
 
