@@ -41,8 +41,10 @@ All these clusters are managed by a central Kyma Control Plane (KCP) that orches
 
 The requirements to follow the exercises in this repository are...
 
-  * You need to have a GitHub user. If you don't have one so far, please sign-up on GitHub before going through the exercises
-  * Additional software tools pre-installed on your SAP TECHED 2025 Client laptops  
+  * You need to fork the repository. Thus, you may need to have a GitHub user.  
+  If you haven't got one yet, please [sign-up](exercises/ex0#exercise-00---sign-up-for-a-new-github-account) on GitHub before the workshop.  
+
+  * Additional software tools are pre-installed on your SAP TECHED 2025 Client laptops  
     
   kubectl plugins | install [jq](https://jqlang.org/download/) | [Kyma CLI for SAP BTP, Kyma Runtime](https://tools.hana.ondemand.com/#cloud) |
   -- | -- | -- |
@@ -64,7 +66,7 @@ The requirements to follow the exercises in this repository are...
   * All of the SAP Kyma environments have been configured to the same template (via terraform automation).  
 
 
-  * Last but not least, you will be able to *play* with a pre-deployed SAP Build multitenant application which follows BTP multitenancy paradigm.  
+  * Last but not least, you will be able to *play* with a pre-deployed SAP Build multitenant application deployed to one of the kyma clusters.   
 
 ## [Let's get started...](exercises/ex0/)
 
@@ -79,7 +81,7 @@ The requirements to follow the exercises in this repository are...
 
   * [Exercise 1.0 - Let's talk SAP BTP, Kyma Runtime (SKR) architecture and its building blocks](exercises/ex1#exercise-10---lets-talk-sap-btp-kyma-runtime-skr-architecture)
   * [Exercise 1.1 - Easy access to your session landscape with SSO.](exercises/ex1#exercise-11---easy-access-to-your-teched-landscape-with-sso)
-  * [Exercise 1.2 - Explore Kyma runtime environment with the ready made automation flows](exercises/ex1#exercise-12---explore-kyma-runtime-environment-with-the-ready-made-automation-flows)
+  * [Exercise 1.2 - Explore Kyma runtime environment with the built-in automation flows](exercises/ex1#exercise-12---explore-kyma-runtime-environment-with-the-ready-made-automation-flows)
   * [Exercise 1.3 - Zoom on Kyma CLI](exercises/ex1#exercise-13---zoom-on-kyma-cli)
   * [Exercise 1.4 - Firefighter access to your kyma cluster](exercises/ex1#exercise-14---fire-fighter-access-to-your-kyma-cluster)
   * [Exercise 1.5 - Kyma diagnostic check](exercises/ex1#exercise-15---kyma-diagnostic-check)
