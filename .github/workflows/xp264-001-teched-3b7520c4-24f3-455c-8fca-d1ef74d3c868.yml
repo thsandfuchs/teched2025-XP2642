@@ -121,7 +121,7 @@
         ./kyma alpha kubeconfig generate --oidc-name kymaprod-oidc --output=kymaprod-oidc.yaml
 
         cat kymaprod-oidc.yaml
-"name": "xp264-001-3b7520c4-24f3-455c-8fca-d1ef74d3c868-admin"
+"name": "xp264-001--admin"
 "on":
   "workflow_dispatch": null
 "permissions":
