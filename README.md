@@ -87,7 +87,7 @@ The requirements to follow the exercises in this repository are...
   * [Exercise 1.7 - Multitenancy playground](exercises/ex1#exercise-17---btp-multitenancy-with-sap-kyma)
 
 
-* #### [Exercise 2 - Keda](exercises/ex12#exercise-2---first-things-first-getting-acquainted-with-sap-btp-kyma-runtime-skr)
+* #### [Exercise 2 - Using External Scalers. Keda](exercises/ex12#exercise-2---first-things-first-getting-acquainted-with-sap-btp-kyma-runtime-skr)
 
 
 * #### [Exercise 3 - Explore Kyma Telemetry Features with SAP Cloud Logging](exercises/ex3#exercise-3---exploring-kyma-telemetry-with-sap-cloud-logging)
