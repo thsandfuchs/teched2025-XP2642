@@ -187,14 +187,14 @@ Please get familiar with the available [commands](https://github.com/kyma-projec
 
 ## Exercise 1.4 - Fire-fighter access to your kyma cluster
 
+  There are two ways to gain access to a kyma cluster in this landscape, anmely:
+  - from a terminal window using the dwonloaded user OIDC kubeconfig with either `kubectl` or `kyma CLI` or
+  - from within a github action workflow (preferred way)
 
-  * Download the OIDC kubeconfig from the kyma dashboard.  
 
-  This method requires a kubectl oidc plugin (already pre-installed) and cannot be performed from a headless context, for instance from a CI/CD pipeline or workflow.  
+  The first method requires a kubectl oidc plugin (already pre-installed) and cannot be performed from a headless context, for instance from a CI/CD pipeline or workflow.  
 
-  Access SAP Kyma dashboard.  
-  You can use the easy navigation landscape dashboard with your allocated student's user name or use one of the kyma dashboard deep links below:
-
+  You can initially download the kubeconfig from the link below or directly from SAP Kyma dashboard.  
 
   * Here goes the table with the links to all btp and k8s resources...  
 
