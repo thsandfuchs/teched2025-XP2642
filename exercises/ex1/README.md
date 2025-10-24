@@ -53,7 +53,7 @@ Some of the modules are added by default (istio, api-gateway and btp-operator), 
 </table>   
 
 
-## Exercise 1.2 - Built-in automation flows
+## Exercise 1.2 - Built-in github actions automation flows
 
 Does one always need to climb the mountain of the onboarding documentation? Not necessarily.  
 A well-thought and designed landscape (Day-0/Day-1) would offer some built-in automation.  
@@ -75,6 +75,26 @@ Please try it out yourself...
 
 
 Good to know:
+
+A GitHub Action that securely connects to Kubernetes clusters using OpenID Connect (OIDC) tokens instead of storing long-lived credentials.
+
+What does this action do?
+-------------
+This action automatically:
+
+- 🔐 Uses GitHub's OIDC token for secure authentication
+- ⚙️ Sets up your Kubernetes context (kubeconfig)
+- 🚀 Enables you to run kubectl commands in your workflow
+- 📁 Provides kubeconfig outputs for advanced use cases
+**Benefits:**
+
+- ✅ No need to store Kubernetes credentials as secrets
+- ✅ Enhanced security through short-lived tokens
+- ✅ Automatic token rotation
+- ✅ Fine-grained access control
+
+📖 Learn more: [Using GitHub Actions OpenID Connect in Kubernetes](https://blogs.sap.com/2022/09/23/using-github-actions-openid-connect-in-kubernetes/)
+
 - For the best experience, please open workflow links into a separate tab or into a new window (right click).  
 - Diagnostic data collection from kyma clusters is done using both Kyma CLI and with several Terraform providers, namely:
   * SAP BTP TF provider
