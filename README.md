@@ -29,11 +29,11 @@ All these clusters are managed by a central Kyma Control Plane (KCP) that orches
 
 ```mermaid
 graph TD
-    A[SAP Kyma Runtime] --> B[Kyma modules]
-    B --> C[Gardener Kubernetes cluster]
-    C --> D[Hyperscaler project]
-    A <-- E[Kyma Control Plane]
-    A --> F[BTP Services]
+    B[Kyma modules] --> A[SAP Kyma Runtime]
+    C[Gardener Kubernetes cluster] --> B
+    D[Hyperscaler project] --> C
+    E[Kyma Control Plane] --> A
+    F[BTP Services] --> A
 ```
 </p>
 </div>
