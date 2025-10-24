@@ -78,6 +78,12 @@ Do it yourself...
 
 <div>
 
+- The pre-configured CI/CD automation workflows are to be manually triggered. 
+- They come as:
+  * admin (cluster-wide) 
+  * students (namespaced)   
+  * data clollection (namespaced) flows.
+  
 ```mermaid
 sequenceDiagram
     Kyma Region (BTP Cockpit) ->> Admin Worklow (cluster-wide): cluster-wide automation
@@ -91,10 +97,7 @@ sequenceDiagram
 
 <div>
 
-- The pre-configured CI/CD automation workflows are to be manually triggered. 
-- They come in two flavors, namely:
-  * admin (cluster-wide) flow
-  * students (namespaced) flow
+- 👉 For the best experience, open workflow links into a separate tab or into a new window (right click).  
 
 | Kyma Region (BTP Cockpit) |  Console (dashboard) | Admin Worklow (cluster-wide) | Student Workflow (namespaced)| Data Collection Workflow (namespaced)
  | :---------  | --------- | :--------- | :------- | -----------
@@ -104,7 +107,7 @@ sequenceDiagram
  | [xp264-000](https://emea.cockpit.btp.cloud.sap/cockpit?idp=anuk8cmfw.accounts.ondemand.com#/globalaccount/c1f19148-71f7-4883-9f86-8d5ee7634dec/subaccount/20b6061c-64aa-4397-bc01-df7348704173) | [<img src="../landscape/xp264-000/kyma_dashboard_url_xp264_000.png" width="75" />](https://dashboard.kyma.cloud.sap/?kubeconfigID=B427F082-0D0C-4657-9D99-56629CC03CF6 ) | [xp264-000--admin](../../../../actions/workflows/xp264-000-teched-622af3fe-a2f5-4fdd-a05f-73e343aec2a5.yml) | [xp264-000--xp264](../../../../actions/workflows/xp264-000-teched-622af3fe-a2f5-4fdd-a05f-73e343aec2a5-xp264.yml) | [k8s-data-context-student](../../../../actions/workflows/k8s-data-context-student.yml)
  | [uk-xp264]() | [<img src="../landscape/uk-xp264/kyma_dashboard_url_uk_xp264.png" width="75" />](https://dashboard.kyma.cloud.sap/?kubeconfigID=0FD84322-535C-4047-89CE-47FC775938FC ) | [uk-xp264--admin](../../../../actions/workflows/uk-xp264-teched-76f46b5b-d9ab-486f-8e4f-12e1163af943.yml) | [uk-xp264--xp264](../../../../actions/workflows/uk-xp264-teched-76f46b5b-d9ab-486f-8e4f-12e1163af943-xp264.yml) | [k8s-data-context-student](../../../../actions/workflows/k8s-data-context-student.yml)
 
-- 👉 For the best experience, open workflow links into a separate tab or into a new window (right click).  
+
 </div>  
 </td>
 </tr>
