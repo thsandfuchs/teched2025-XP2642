@@ -91,6 +91,10 @@ sequenceDiagram
 
 <div>
 
+- The pre-configured CI/CD automation workflows are to be manually triggered. They come in two flavors, namely:
+  * admin (cluster-wide)
+  * students (namespaced) flows as depicted below:
+
 | Kyma Region (BTP Cockpit) |  Console (dashboard) | Admin Worklow (cluster-wide) | Student Workflow (namespaced)| Data Collection Workflow (namespaced)
  | :---------  | --------- | :--------- | :------- | -----------
  | [uk-south](https://emea.cockpit.btp.cloud.sap/cockpit?idp=anuk8cmfw.accounts.ondemand.com#/globalaccount/c1f19148-71f7-4883-9f86-8d5ee7634dec/subaccount/4457fb7f-3296-40cf-b66b-aac3d9d4a2b2) | [<img src="../landscape/uksouth/kyma-dashboard_url_uksouth.png" width="75" />](https://dashboard.kyma.cloud.sap/?kubeconfigID=6D0AF763-179E-4F84-8ED0-724B3C0C2C92) | [uk-south--admin](../../../../actions/workflows/uk-south-teched-7a69075f-7faf-4604-a62e-806648791dba.yml) | [uk-south--xp264](../../../../actions/workflows/uk-south-teched-7a69075f-7faf-4604-a62e-806648791dba-xp264.yml)| [ k8s-data-context-student](../../../../actions/workflows/k8s-data-context-student.yml)
@@ -108,7 +112,8 @@ sequenceDiagram
 
 - 👉 For the best experience, do open workflow links into a separate tab or into a new window (right click).  
 
-- The pre-configured CI/CD automation workflows are to be manually triggered. They come in two flavors, as:
+Explanation. What happened?
+- The pre-configured CI/CD automation workflows are to be manually triggered. They come in two flavors, namely:
   * admin (cluster-wide)
   * students (namespaced) flows as depicted below:
 
@@ -131,6 +136,7 @@ sequenceDiagram
 </tr>
 </tbody>
 </table> 
+They feature a number of steps. Each step represents a dedicated task.
 
 - Diagnostic data collection from kyma clusters is done using both Kyma CLI and with several Terraform providers, namely:
   * SAP BTP TF provider
