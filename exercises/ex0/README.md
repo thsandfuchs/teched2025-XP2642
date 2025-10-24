@@ -98,7 +98,7 @@ You may login to [SAP-TechEd25-XP264 Business Technology Platform - Cockpit](htt
 - The majority of runtime contexts are hosted in the same BTP region - in the EU20 data center (Azure/Netherlands)
 - However, there are a few hosted in the EU10 data center (AWS/Francfort) as well.
 - Each BTP subaccount can host a single kyma runtime environment.
-- Each kyma runtim environment maps into a single kuberneters cluster in the Azure or AWS region of your choice.
+- Each kyma runtime environment maps into a single kuberneters cluster in the Azure or AWS region of your choice.
 - Please note the kyma cluster region may be different from the BTP subaccount region.
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
@@ -143,7 +143,6 @@ Here goes a diagram of the functional architecture of the solution
 </tr>
 </tbody>
 </table>   
-
 
 
 ## Summary
