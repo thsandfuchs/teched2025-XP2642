@@ -55,7 +55,15 @@ Some of the modules are added by default (istio, api-gateway and btp-operator), 
 
 ## Exercise 1.2 - Built-in github actions automation flows
 
-- These automations are like fuel to your kubernetes engine
+Does one always need to climb the mountain of the onboarding documentation? Not necessarily.  
+A well-thought and designed landscape (Day-0/Day-1) would offer some built-in automation.  
+this landscape features several pre-configured CI/CD github action workflows and Terraform automation.
+
+Explore Kyma runtime environments with the built-in automation flows.  
+Retrieve the key information about the state of the runtime environment... at a glance.  
+Both securely and effortlessly!
+
+These automations are like fuel to your kubernetes engines and environments
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
 <tbody>
@@ -69,15 +77,10 @@ Some of the modules are added by default (istio, api-gateway and btp-operator), 
 </tbody>
 </table>  
 
-Does one always need to climb the mountain of the onboarding documentation? Not necessarily.  
-A well-thought and designed landscape (Day-0/Day-1) would offer some built-in automation.  
-this landscape features several pre-configured CI/CD github action workflows and Terraform automation.
 
-Explore Kyma runtime environments with the built-in automation flows.  
-Retrieve the key information about the state of the runtime environment... at a glance.  
-Both securely and effortlessly!
 
-Please try it out yourself...
+Do it out yourself...
+Pick a region and action of your choice...
 
  | Kyma Region (BTP Cockpit) |  Console (dashboard) | Admin Worklow (cluster-wide) | Student Workflow (namespaced)| Data Collection Workflow (namespaced)
  | :---------  | --------- | :--------- | :------- | -----------
@@ -90,23 +93,23 @@ Please try it out yourself...
 
 Good to know:
 
-A GitHub Action that securely connects to Kubernetes clusters using OpenID Connect (OIDC) tokens instead of storing long-lived credentials.
+  Any automation workflow above can connect to Kubernetes clusters using OpenID Connect (OIDC) tokens, instead of storing long-lived or even static credentials.
 
-What does this action do?
--------------
-This action automatically:  
+  What is happening ?
+  -------------
+  These workflows do automatically:  
 
-- 🔐 Uses GitHub's OIDC token for secure authentication
-- ⚙️ Sets up your Kubernetes context (kubeconfig)
-- 🚀 Enables you to run kubectl commands in your workflows
-- 🚀 Enables you to run kyma cli commands in your workflows
+  - 🔐 Use GitHub's OIDC token for secure authentication
+  - ⚙️ Set up your Kubernetes context (kubeconfig)
+  - 🚀 Enable you to run kubectl commands in your workflow
+  - 🚀 Enable you to run kyma cli commands in your workflow
 
-**Benefits:**
+  **Benefits:**
 
-- ✅ No need to store Kubernetes credentials as secrets
-- ✅ Enhanced security through short-lived tokens
-- ✅ Automatic token rotation
-- ✅ Fine-grained access control
+  - ✅ No need to store Kubernetes credentials as secrets
+  - ✅ Enhanced security through short-lived tokens
+  - ✅ Automatic token rotation
+  - ✅ Fine-grained access control
 
 📖 Learn more: [Using GitHub Actions OpenID Connect in Kubernetes](https://blogs.sap.com/2022/09/23/using-github-actions-openid-connect-in-kubernetes/)
 
