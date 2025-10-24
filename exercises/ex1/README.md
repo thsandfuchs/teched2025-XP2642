@@ -67,12 +67,12 @@ In this exercise you will:
 - 👉 Retrieve the key information about the state of the runtime environment... at a glance.  
 - 👉 Both securely and effortlessly!
 
-Do it yourself...
-- The pre-configured CI/CD automation workflows are to be manually triggered. 
-- They come as:
-  * admin (cluster-wide) 
-  * students (namespaced)   
-  * data collection (namespaced) workflows.
+Do it yourself...  
+The pre-configured CI/CD automation workflows are to be manually triggered. 
+They come as:
+* admin (cluster-wide) 
+* students (namespaced)   
+* data collection (namespaced) workflows.
 - 👉 Pick a region and action of your choice...
 - 👉 Trigger the workflow...
 - 👉 Inspect the steps of each workflow...
