@@ -172,7 +172,8 @@ config:
 ---
 
 graph TD
-   DIR("<img src='../landscape/uksouth/kyma-dashboard_url_uksouth.png'; width='75' />")
+   n1["This is sample label"]
+   @n1{ img: '../landscape/uksouth/kyma-dashboard_url_uksouth.png', w='75' />")
 ```
 </p>
 </div>
