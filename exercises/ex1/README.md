@@ -170,7 +170,7 @@ config:
   themeVariables:
     primaryColor: "#00ff00"
   securityLevel: "loose"
-
+---
 
 graph TD
    DIR("<img src='../landscape/uksouth/kyma-dashboard_url_uksouth.png'; width='75' />")
