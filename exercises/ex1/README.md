@@ -78,7 +78,6 @@ They come in three different flavors, namely as:
 <tbody>
 <tr style="height: 193px;">
 <td style="width: 71.6%; height: 193px;">
-<a href="https://docs.github.com/en/actions/get-started/understand-github-actions" >
 <div>
 - 👉 Let's have a look at the common building blocks (steps) of a github action workflow
 <p float="left">  
@@ -91,6 +90,7 @@ graph TD
     D(Setup Kube Context) -- kubeconfig permissions check --> E
     E(check permissions) -- the below steps may differ from one worklow to another --> F(Other steps)
 
+    click A href "https://docs.github.com/en/actions/get-started/understand-github-actions" _parent
     click B href "https://github.com/marketplace/actions/checkout" "checkout repository" _blank
     click C href "https://github.com/marketplace/actions/helm-tool-installer" "Install helm" _blank
     click D "https://github.com/marketplace/actions/kubernetes-set-context" _blank
@@ -98,7 +98,6 @@ graph TD
 ```
 </p>
 </div>
-</a>
 </td>
 </tr>
 </tbody>
