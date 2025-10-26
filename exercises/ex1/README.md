@@ -174,9 +174,7 @@ config:
 
 flowchart TD
   n1["This is sample label"]
-  n2["This is sample label"]
   n1@{ img: "https://static.mermaidchart.dev/whiteboard/default-image-shape.png"}
-  n2@{ img: "../landscape/uksouth/kyma-dashboard_url_uksouth.png"}
 
 
 
