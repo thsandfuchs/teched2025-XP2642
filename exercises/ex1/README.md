@@ -117,6 +117,7 @@ Time to do it yourself...
 <td style="width: 71.6%; height: 193px;">
 
 <div>
+<p float="left">
 
 ```mermaid
 sequenceDiagram
@@ -127,7 +128,7 @@ sequenceDiagram
     Note left of Admin Worklow (cluster-wide): Choose a workflow<br/>and open it<br/>with the right click.
 
 ```
-
+</p>
 </div>
 
 <div>
