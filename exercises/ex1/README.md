@@ -81,7 +81,7 @@ They come in three different flavors, namely as:
 <div>
 Let's have a look at the building blocks (steps) of github action workflows:
 <p float="left">  
-<h1><a href="https://docs.github.com/en/actions/get-started/understand-github-actions"><img class="aligncenter" src="../ex1/images/engine_fuel.jpg" alt="github action worflow steps" height="800"/></a></h1>
+<h1><a href="https://docs.github.com/en/actions/get-started/understand-github-actions"><img class="aligncenter" src="" alt="github action worflow steps" height="800"/></a></h1>
 
 
 ```mermaid
@@ -89,8 +89,8 @@ graph TD
     A[Set up job] -- checkout repository --> B
     B(Check out Git repository) --> C
     C[Install helm] -- create kubeconfig with dynamic credentials --> D
-    D(Setup Kube Context) --> E
-    E(check permissions) -- these steps may differe from one worklow to another --> F(Other steps)
+    D(Setup Kube Context) -- kubeconfig permissions check --> E
+    E(check permissions) -- the belows steps may differ from one worklow to another --> F(Other steps)
 ```
 </p>
 </div>
