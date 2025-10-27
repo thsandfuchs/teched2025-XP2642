@@ -177,7 +177,7 @@ output "kymaruntime_environment" {
 
 output "kymaruntime_kubeconfig" {
   description = "kymaruntime_kubeconfig retrieved via the provisioning service API"
-  value = module.k8s_context.kymaruntime_kubeconfig
+  value = nonsensitive(module.k8s_context.kymaruntime_kubeconfig)
 }
 
 output "kyma_serviceaccount" {
