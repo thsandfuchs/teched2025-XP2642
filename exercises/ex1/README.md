@@ -130,17 +130,15 @@ They come in three different flavors, namely as:
 <td> Github automation workflow </td> <td> Sequence diagram </td>
 </tr>
 <tr>
-<td> style="text-align: center;" common steps </td>
+<td> common steps </td>
 <td>
+<div>
  
 ```mermaid
 ---
 title: Github automation workflow sequence
 config:
-  look: classic
-  theme: neutral
-  themeVariables:
-    primaryColor: "#00ff00"
+  theme: classic
   securityLevel: "loose"
 ---
 sequenceDiagram
@@ -164,6 +162,7 @@ sequenceDiagram
   kube ->> check: permissions check
   check ->> other: admin<br>student<br>diagnostics
 ```
+</div>
 </td>
 </tr>
 <tr>
