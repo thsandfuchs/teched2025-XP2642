@@ -133,6 +133,7 @@ They come in three different flavors, namely as:
 <td> common steps </td>
 <td>
 <div>
+👉 Let's have a look at the common building blocks (steps) of a github action workflow
  
 ```mermaid
 ---
@@ -194,6 +195,12 @@ flowchart TD
 <p float="left">  
 
 ```mermaid
+---
+title: Github automation workflow sequence common building blocks
+config:
+  theme: classic
+  securityLevel: "loose"
+---
 sequenceDiagram
   actor me as student
   participant job as Set up job
@@ -216,6 +223,9 @@ sequenceDiagram
   check ->> other: admin<br>student<br>diagnostics
 
 ```
+
+👉 Let's have a look at the other steps of a github action workflow
+
 
 ```mermaid
 
