@@ -25,7 +25,7 @@ All these clusters are managed by a central Kyma Control Plane (KCP) that orches
 <tr style="height: 193px;">
 <td style="width: 71.6%; height: 193px;">
 <div>
-<p float="left">  
+
 
 ```mermaid
 
@@ -49,9 +49,9 @@ flowchart TD
 
 ```
 
+</div>
+<div>
 <h1><a href="https://kubernetes.io/docs/concepts/overview/components/"><img class="aligncenter" src="https://kubernetes.io/images/docs/components-of-kubernetes.svg" alt="Kubernetes pod running inside a cluster" height="800"/></a></h1>
-
-</p>
 </div>
 </td>
 </tr>
