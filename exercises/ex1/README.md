@@ -126,10 +126,9 @@ They come in three different flavors, namely as:
 
 <table>
 <tr>
-<td> Github automation </td> <td> workflow sequence </td>
+<td> Github automation workflow sequence </td> <td> admin -- student -- checks </td>
 </tr>
 <tr>
-<td> 200 </td>
 <td>
 
 ```mermaid
