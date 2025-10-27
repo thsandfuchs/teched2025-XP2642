@@ -113,6 +113,7 @@ data "http" "kymaruntime_bindings" {
 
 # https://github.com/hashicorp/terraform-provider-http/pull/114#issuecomment-1144999897
 #
+/*
 resource "terraform_data" "kymaruntime_bindings" {
   count    = length(var.kymaruntime_bindings[*])
 
@@ -131,13 +132,14 @@ resource "terraform_data" "kymaruntime_bindings" {
     }
   }
 }
+*/
 
 
 # https://stackoverflow.com/questions/70848503/is-it-possible-to-recover-from-an-error-returned-by-a-data-source
 #
 locals {
-  //kymaruntime_bindings = one(data.http.kymaruntime_bindings[*].response_body)
-  kymaruntime_bindings = try(one(terraform_data.kymaruntime_bindings[*].output), null)
+  kymaruntime_bindings = one(data.http.kymaruntime_bindings[*].response_body)
+  //kymaruntime_bindings = try(one(terraform_data.kymaruntime_bindings[*].output), null)
 }
 
 output "kymaruntime_bindings" {
