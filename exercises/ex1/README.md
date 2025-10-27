@@ -200,11 +200,12 @@ flowchart TD
 <p float="left">  
 
 ```mermaid
+
 ---
-title: Github automation workflow sequence common building blocks
 config:
-  theme: classic
-  securityLevel: "loose"
+  theme: redux-color
+  look: classic
+title: Github automation workflow sequence common building blocks
 ---
 sequenceDiagram
   actor me as student
@@ -214,18 +215,20 @@ sequenceDiagram
   participant kube as Setup Kube Context
   participant check as permissions check
   participant other as other
-
   Note over repo: checkout repository
   Note over kube: create kubeconfig with<br/>dynamic credentials
   Note over check: kubeconfig<br>permissions check
   Note over other: the other steps<br>may differ based<br>on workflow types
   autonumber
+ rect rgb(191, 223, 255)
   me ->> job: job setup
   job ->> repo: repo checkout
   repo ->> helm: install helm
   helm ->> kube: create kubeconfig
   kube ->> check: permissions check
   check ->> other: admin<br>student<br>diagnostics
+end
+
 
 ```
 <hr>
@@ -281,9 +284,9 @@ sequenceDiagram
   participant data as Data Collection Workflow (namespaced)
   rect rgb(191, 223, 255)
     me ->> admin: pick the worflow
-    me -->> admin: cluster-wide automation
-    me -->> student: namespaced automation
-    me -->> data: cluster diagnostic ckeck
+    btp -->> admin: cluster-wide automation
+    btp -->> student: namespaced automation
+    btp -->> data: cluster diagnostic ckeck
     Note over me: Pick an automation workflow<br/>for a regionn<br/>of your choice.
     Note over admin, data: Choose a workflow<br/>and open it<br/>with the right click.
   end
