@@ -264,14 +264,12 @@ Time to do it yourself...
 <td style="width: 71.6%; height: 193px;">
 
 <div>
-<p float="left">
 
 ```mermaid
 ---
-title: Github automation workflow per category: admin, student, data
 config:
   theme: classic
-  securityLevel: "loose"
+title: 'Github automation workflow per category: admin, student, data'
 ---
 sequenceDiagram
   actor me as me
@@ -279,17 +277,15 @@ sequenceDiagram
   participant admin as Admin Worklow (cluster-wide)
   participant student as Student Workflow (namespaced)
   participant data as Data Collection Workflow (namespaced)
-
   btp -->> admin: cluster-wide automation
   btp -->> student: namespaced automation
   btp -->> data: cluster diagnostic ckeck
   Note left of btp: Pick a region<br/>and action<br/>of your choice.
-  Note left of admin: Choose a workflow<br/>and open it<br/>with the right click.
+  Note over admin,student: Choose a workflow<br/>and open it<br/>with the right click.
 ```
 
-</p>
 </div>
-
+<hr>
 <div>
 
 👉 For the best experience, open workflow links into a separate tab or into a new window (right click).  
