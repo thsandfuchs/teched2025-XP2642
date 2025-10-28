@@ -18,19 +18,23 @@
 
 - step1:
 Initially deployed serveless python 3.12 function with a single replica....  
-As shwon below, no HPA in place yet:  
+As shown below, no HPA in place yet:  
 
+> [!NOTE]
+```rust
+>kubectl get hpa faas-srv  -n xp264-050 --kubeconfig ~/.kube/kubeconfig-b84edf3.yaml
 ```
-kubectl get hpa faas-srv  -n xp264-050 --kubeconfig ~/.kube/kubeconfig-b84edf3.yaml
-Error from server (NotFound): horizontalpodautoscalers.autoscaling "faas-srv" not found
-```
+> Error from server (NotFound): horizontalpodautoscalers.autoscaling "faas-srv" not found
+
 
 - step2:
 Scale-out to 5 replicas 
+
+> [!NOTE]
+```rust
+> kubectl autoscale function faas-srv  -n xp264-050 --cpu-percent=50 --min=5 --max=10 --kubeconfig ~/.kube/kubeconfig-b84edf3.yaml
 ```
-kubectl autoscale function faas-srv  -n xp264-050 --cpu-percent=50 --min=5 --max=10 --kubeconfig ~/.kube/kubeconfig-b84edf3.yaml
-horizontalpodautoscaler.autoscaling/faas-srv autoscaled
-```
+> horizontalpodautoscaler.autoscaling/faas-srv autoscaled
 
 
 - step3:  
