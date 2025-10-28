@@ -85,12 +85,12 @@ The requirements to follow the exercises in this repository are...
 - For all other exercises which may require a terminal use, you may use the built-in VSCode terminal window.
 
 - As this is a Day-2 operation brief, the entire cloud landscape has been pre-configured with a number of shared components, for instance: 
-   -  🔗 SAP Cloud Identity Services (SAP IAS), 
-   -  🔗 SAP Cloud Logging, 
-   -  🔗 SAP HANA Cloud,
-   -  🔗 ArgoCDaaS,
-   -  🔗 SAP BTP Connectivity services - Destination service, Connectivity service, Cloud Connector, Connectivity Proxy and Transparent Proxy
-   -  🔗 S4/HANA On-premise (private cloud) with the Cloud Connector in the private network.
+   🔗 SAP Cloud Identity Services (SAP IAS)  
+   🔗 SAP Cloud Logging  
+   🔗 SAP HANA Cloud  
+   🔗 ArgoCDaaS  
+   🔗 SAP BTP Connectivity services - Destination service, Connectivity service, Cloud Connector, Connectivity Proxy and Transparent Proxy  
+   🔗 S4/HANA On-premise (private cloud) with the Cloud Connector in the private network.  
 
 - All of the SAP Kyma environments have been configured to the same template (via terraform automation).  
 
@@ -132,9 +132,9 @@ The requirements to follow the exercises in this repository are...
 
 
 * #### [Exercise 2 - Using External Scalers. Keda - the Kubernetes Event-driven Autoscaler.](exercises/ex2#exercise-2---use-external-scalers-keda---the-kubernetes-event-driven-autoscaler)
-  * [Exercise 2.0 - Introduction to kubernetes autoscalers](exercises/ex2#exercise-20---sign-up-for-a-new-github-account)
-  * [Exercise 2.1 - HPA](exercises/ex2#exercise-21---hpa)
-  * [Exercise 2.2 - KEDA](exercises/ex2#exercise-22---keda)
+  * [Exercise 2.0 - Introduction to kubernetes autoscalers](exercises/ex2#exercise-20---introduction-to-kubernetes-autoscalers)
+  * [Exercise 2.1 - HPA - Horizontal Pod Autoscaler](exercises/ex2#exercise-21---hpa)
+  * [Exercise 2.2 - KEDA - Kubernetes Event-driven Autoscaler](exercises/ex2#exercise-22---keda)
   * [Exercise 2.3 - KEDA - Cron based scaler](exercises/ex2#exercise-23---kedas-cron-based-scaler)
 
 
