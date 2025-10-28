@@ -131,6 +131,111 @@ Furthermore, each student's runtime context has a preconfigured SAP Cloud Connec
 </table>  
 
 
+## Exercise 0.4 - SAP BTP, Kyma Runtime (SKR) architecture
+
+
+There are two main components in the SAP BTP, Kyma Runtime architecture, namely:
+
+  * Kyma Control Plane (KCP)
+  * Kyma Runtime (SKR)
+
+### Kyma Control Plane (KCP)  
+Kyma Control Plane is a central component that manages the lifecycle of the Kyma Runtime clusters. It is responsible for deploying, configuring, and monitoring the underlying Kubernetes clusters and the Kyma modules running on them. KCP provides a unified interface for users to manage their clusters, install new modules, and monitor the health and performance of the runtime environment.  
+
+Currently, the KCP is a single instance deployed in the Google Cloud Platform on top of GKE cluster. The future plan is to have multiple instances of KCP as to be able to support restricted markets and improve scalability.  
+
+### Kyma Runtime (SKR)  
+Each Kyma Runtime instance is a separate Kubernetes cluster managed by the KCP.  
+Customers can pick and choose which Kyma modules to install on their runtime, based on their specific requirements.  
+The Kyma modules provide additional functionality and services to the runtime environment, such as service mesh integration, serverless computing, telemetry, and API gateway.  
+Some of the modules are added by default (istio, api-gateway and btp-operator), while others can be installed on request.
+
+  * Kyma Runtime (SKR) architecture diagram 
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
+<h1><a href="https://url.sap/3kf0ol"><img class="aligncenter" src="../ex0/images/skr.drawio.svg" alt="" height="600"/></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table> 
+
+<!-- 
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div style="width: 100%; height: 600px;">
+
+<h3>Mermaid sequence diagram showing the system flow between K8s components to start a container.</h3>
+
+```mermaid 
+
+---
+title: A Mermaid sequence diagram showing the system flow between K8s components to start a container.
+config:
+  look: classic
+  theme: neutral
+  themeVariables:
+    primaryColor: "#00ff00"
+  securityLevel: "loose"
+---
+sequenceDiagram
+    actor me
+    participant apiSrv as control plane<br><br>api-server
+    participant etcd as control plane<br><br>etcd datastore
+    participant cntrlMgr as control plane<br><br>controller<br>manager
+    participant sched as control plane<br><br>scheduler
+    participant kubelet as node<br><br>kubelet
+    participant container as node<br><br>container<br>runtime
+
+    autonumber
+    me->>apiSrv: 1. kubectl create -f pod.yaml
+    apiSrv->>etcd: 2. save new state
+    cntrlMgr->>apiSrv: 3. check for changes
+    sched->>apiSrv: 4. watch for unassigned pods(s)
+    apiSrv->>sched: 5. notify about pod w nodename=" "
+    sched->>apiSrv: 6. assign pod to node
+    apiSrv->>etcd: 7. save new state
+    kubelet->>apiSrv: 8. look for newly assigned pod(s)
+    apiSrv->>kubelet: 9. bind pod to node
+    kubelet->>container: 10. start container
+    kubelet->>apiSrv: 11. update pod status
+    apiSrv->>etcd: 12. save new state
+```    
+
+</div>
+</td>
+</tr>
+</tbody>
+</table> 
+
+--->
+
+## Exercise 1.1 - Easy access to your teched landscape with SSO.
+
+- This SAP Workzone dashboard is to assist you with the landscape discovery and ease the navigation thorugh the landscape components.
+- Please use your allocated student's credentials to login...
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div> 
+<h1><a href="https://url.sap/3kf0ol"><img class="aligncenter" src="../ex0/images/site_navigation.png" alt="" height="600"/></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table>   
+  
+
+
+
 Here goes a diagram of the functional architecture of the solution
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
