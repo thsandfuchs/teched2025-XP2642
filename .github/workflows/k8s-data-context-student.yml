@@ -104,7 +104,7 @@ jobs:
     - name: CLUSTER_CONTEXT
       id: cluster_context
       run: |
-        echo "${{ inputs.subaccount_name }}"
+        echo "kyma btp region: ${{ inputs.subaccount_name }}"
         echo 'CLUSTER_CONTEXT=$CLUSTER_CONTEXT'  >> "$GITHUB_OUTPUT"
 
 
