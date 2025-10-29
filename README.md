@@ -112,12 +112,12 @@ The requirements to follow the exercises in this repository are...
 
 > [!NOTE]
 > - As this is the Day-2 operation brief, the entire cloud landscape has been pre-configured with a number of shared components, namely:  
->  - 🔗 SAP Cloud Identity Services (SAP IAS)  
->  - 🔗 SAP Cloud Logging  
->  - 🔗 SAP HANA Cloud  
->  - 🔗 ArgoCDaaS  
->  - 🔗 SAP BTP Connectivity services - Destination service, Connectivity service, Cloud Connector, Connectivity Proxy and Transparent Proxy  
->  - 🔗 S4/HANA On-premise (private cloud) with the Cloud Connector in the private network.  
+>   - 🔗 SAP Cloud Identity Services (SAP IAS)  
+>   - 🔗 SAP Cloud Logging  
+>   - 🔗 SAP HANA Cloud  
+>   - 🔗 ArgoCDaaS  
+>   - 🔗 SAP BTP Connectivity services - Destination service, Connectivity service, Cloud Connector, Connectivity Proxy and Transparent Proxy  
+>   - 🔗 S4/HANA On-premise (private cloud) with the Cloud Connector in the private network.  
 >
 > - All of the SAP Kyma environments have been configured to the same template (via terraform automation).  
 >
