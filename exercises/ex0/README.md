@@ -52,7 +52,7 @@ This is mandatory to be able to run the session exercises which are implemented 
 </table>   
 
  - 👉 Choose **Create Fork**. You are now redirected to the copy of the teched repository in your personal GitHub account.
- - 👉 Choose **Activate Github Actions** This is mandatory for this session.
+ - 👉 Choose **Activate Github Actions**. This is mandatory for this session.
 
 ## Exercise 0.2 - The rules of the game
 
@@ -86,13 +86,14 @@ The students can pick and choose any available kyma cluster region the following
 | xp264-050  (eu20/azure)              |  UK SOUTH region | kyma environment with the cluster in the uk south region        |
 
 
-Good to know: 
-- Each cluster has been configured to the same template with dedicated namespaces for each student.
-- As this is an academic exercise, the complete user/namespace isolation has not been enforced.
- 
-Furthermore:
-- The students do not have access to the master components of the landscape. 
-- Any shared component access required for the session is granted via SSO with the links available from the Easy Navigation site.
+> [!NOTE]
+> Good to know: 
+> - Each cluster has been configured to the same template with dedicated namespaces for each student.
+> - As this is an academic exercise, the complete user/namespace isolation has not been enforced.
+> 
+> Furthermore:
+> - The students do not have access to the master components of the landscape. 
+> - Any shared component access required for the session is granted via SSO with the links available from the Easy Navigation site.
 
 
 
