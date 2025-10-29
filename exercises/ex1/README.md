@@ -327,13 +327,13 @@ In a nutshell, Kyma CLI extends the capabilities of the ubiquitous kubectl CLI a
 > - It is also available out-of-the-box in the automation workflows prepared for this session.
 > - It is available for [installation](https://github.com/marketplace/actions/setup-kyma-cli) in the github CI/CD pipelines from the [github actions marketplace](https://github.com/marketplace?query=kyma).  
 
-
-👉 run `kyma version`
-
-```
-Kyma-CLI Version: 3.2.0
-```
 > [!NOTE]
+>
+> 👉 run `kyma version`
+> 
+> ```
+> Kyma-CLI Version: 3.2.0
+> ```
 >
 > 👉 run `kyma -h`
 > ~~~rust
@@ -351,7 +351,7 @@ Kyma-CLI Version: 3.2.0
 >  help        Help about any command
 >  module      Manages Kyma modules
 >  version     Displays the version of Kyma CLI
-
+>
 > Flags:
 >  -h, --help                    Help for the command
 >      --kubeconfig string       Path to the Kyma kubeconfig file
