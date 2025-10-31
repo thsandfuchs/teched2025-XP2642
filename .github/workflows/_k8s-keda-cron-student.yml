@@ -5,8 +5,8 @@ env:
   "NAMESPACE": "${{ inputs.NAMESPACE }}"  
 
   RUNTIME_ACTION: "apply"
-  CONFIG_DIRECTORY: "./exercises/ex1/k8s-data/"
-  PATH_TO_TFSCRIPT: "./exercises/ex1/k8s-data/"  
+  CONFIG_DIRECTORY: "./exercises/ex2/k8s/"
+  PATH_TO_TFSCRIPT: "./exercises/ex2/k8s/"  
 
 "jobs":
   "apply-manifest":
@@ -103,9 +103,9 @@ env:
     - "name": "Create a Function, a Deployment and a StatefulSet as sample workloads."
       "run": |
         echo "Create a Function, a Deployment and a StatefulSet as sample workloads. in the namespace: $NAMESPACE..."
-        kubectl -n $NAMESPACE apply -f k8s/deployment.yaml
-        kubectl -n $NAMESPACE apply -f k8s/function.yaml
-        kubectl -n $NAMESPACE apply -f k8s/statefulset.yaml
+        kubectl -n $NAMESPACE apply -f {{ env.CONFIG_DIRECTORY}}/deployment.yaml
+        kubectl -n $NAMESPACE apply -f {{ env.CONFIG_DIRECTORY}}/function.yaml
+        kubectl -n $NAMESPACE apply -f {{ env.CONFIG_DIRECTORY}}/statefulset.yaml
 
     - "name": "Apply KEDA cron-based scaling to these workloads."
       "run": |
