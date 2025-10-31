@@ -158,7 +158,7 @@ env:
 #      with:
 #       namespace: ${{ env.NAMESPACE }}
 
-"name": "_k8s-keda-hpa-student"
+"name": "_k8s-hpa-student"
 "on":
   "workflow_call":
     "inputs":

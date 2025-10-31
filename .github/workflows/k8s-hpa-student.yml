@@ -108,7 +108,7 @@ jobs:
       matrix:
         namespace: [ "${{ github.event.inputs.NAMESPACE }}" ]
 
-    uses: ./.github/workflows/_k8s-keda-hpa-student.yml
+    uses: ./.github/workflows/_k8s-hpa-student.yml
     with:
       NAMESPACE: ${{ matrix.namespace }}
       CLUSTER_CONTEXT: ${{ fromJSON(needs.cluster-context.outputs.CLUSTER_CONTEXT) }}
