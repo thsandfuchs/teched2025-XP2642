@@ -105,8 +105,8 @@ env:
         echo "display all pods in the namespace: $NAMESPACE..."
         kubectl get pod -n $NAMESPACE
         echo -e "display all hpas and scale objects in the namespace: $NAMESPACE..."
-        kubectl get hpa -n $NAMESPACE || true
-        kubectl get hpa faas-srv -n $NAMESPACE || true
+        kubectl get hpa -n $NAMESPACE --ignore-not-found || true
+        kubectl get hpa faas-srv -n $NAMESPACE --ignore-not-found || true
         #kubectl delete hpa keda-hpa-faas-srv -n $NAMESPACE --ignore-not-found || true
         #kubectl wait --for=delete hpa/keda-hpa-faas-srv --timeout=90s
         kubectl delete scaledobject faas-srv -n $NAMESPACE || true
