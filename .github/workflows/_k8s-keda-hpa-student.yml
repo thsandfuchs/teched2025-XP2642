@@ -310,7 +310,10 @@ env:
         kubectl get hpa faas-srv -n $NAMESPACE || true
 
         echo "wait for function deployment rollout complete"
-        kubectl rollout status deployment faas-srv -n $NAMESPACE --timeout=90s
+        kubectl get function -faas-srv -n $NAMESPACE -o jsonpath="{.status.conditions[1]}" | jq
+        kubectl wait --for=jsonpath="{.status.conditions[1].status}"=True function -faas-srv -n $NAMESPACE --timeout=90s
+        #sleep 30
+        #kubectl rollout status deployment faas-srv -n $NAMESPACE --timeout=90s
 
 #    - "name": "Increase the load"
 #      "run": |
