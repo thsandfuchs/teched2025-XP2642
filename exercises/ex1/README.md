@@ -60,8 +60,6 @@ flowchart LR
     class Alert,Scale decision
 ```
 
-
-``
 </div>
 
 - Timeline-based activities.
