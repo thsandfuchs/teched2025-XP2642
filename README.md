@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2025 session catalog number XP264 - [**Explore how to run cloud-native applications on SAP BTP, Kyma runtime.**](https://www.sap.com/events/teched/berlin/flow/sap/te25/catalog-inperson/page/catalog/session/1749035076180001oik0)  
+This repository contains the material for the SAP TechEd 2025 session catalog number XP264 - [**Explore how to run cloud-native applications on SAP BTP, Kyma runtime.**](https://url.sap/xuntr9)  
 
   * Day-2 Operations: Management, Maintenance, Monitoring, and Optimization
   * Technical connectivity to public and private (on-premise) systems 
@@ -10,15 +10,6 @@ This repository contains the material for the SAP TechEd 2025 session catalog nu
 ## Overview
 
 This session introduces attendees to **Day-2** operations with SAP BTP, Kyma runtime - a managed kubernetes environment to help connect and extend enterprise applications in the cloud-native world.  
-
-<!---
-In a nutshell, SAP BTP, Kyma Runtime (SKR) is a managed offering of a Kubernetes Cluster based on Gardener, extended by a set of building blocks called **Kyma modules**.  
-The idea being that each instance of SAP BTP Kyma runtime environment is a separate Kubernetes cluster with its own set of modules.  
-All these clusters are managed by a central Kyma Control Plane (KCP) that orchestrates the lifecycle of 
- - the underlying hyperscaler project, 
- - the Gardener Cluster, 
- - and the Kyma modules.
---->
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
 <tbody>
@@ -58,12 +49,6 @@ flowchart TD
 ```
 
 </div>
-<!---
-<div>
-<h1><a href="https://kubernetes.io/docs/concepts/overview/components/"><img class="aligncenter" src="https://kubernetes.io/images/docs/components-of-kubernetes.svg" alt="Kubernetes pod running inside a cluster" height="800"/></a></h1>
-
-</div>
---->
 </td>
 </tr>
 </tbody>
@@ -99,7 +84,8 @@ The requirements to follow the exercises in this repository are...
 > [!WARNING]
 > Personal devices ought not to be used for this session.
 >
-> - However, the good news is you may run the **GHA-based exercises** directly, from your forked repository, in a Chrome browser on the **provided** teched laptops.
+> - However, the good news is you may run the **GHA-based exercises** directly, from your [forked repository](
+https://url.sap/h4ioc0), in the Chrome browser on the **provided** teched laptops.
 
 > [!TIP]
 > **Session directions.**  
@@ -135,7 +121,7 @@ The requirements to follow the exercises in this repository are...
     C:\Users\TE-06\.krew\bin\kubectl-resource_capacity.exe
     C:\Users\TE-06\.krew\bin\kubectl-view_serviceaccount_kubeconfig.exe 
     ``` 
-  - jq, curl, [kyma cli](https://github.com/kyma-project/cli/releases/download/3.2.0/kyma_Windows_x86_64.zip), terraform, etc.
+  - jq, curl, [kyma cli](https://url.sap/ottdcc), terraform, etc.
 
 
 ## [Let's get started...](exercises/ex0/)

@@ -19,7 +19,7 @@ You must have a personal github account for this session.
 
 ## Exercise 0.1 - Fork the teched2025-XP264 repository.
 
-This is mandatory to be able to run the session exercises which are implemented as github actions.
+This is **mandatory** step to be able to run the session exercises which are implemented as github actions.
 
  - 👉 Login to [GitHub](https://github.com/).
  - 👉 On the [main page of this repository](https://github.com/SAP-samples/teched2025-XP264), choose **Fork** on the top right.
@@ -51,8 +51,9 @@ This is mandatory to be able to run the session exercises which are implemented 
 </tbody>
 </table>   
 
- - 👉 Choose **Create Fork**. You are now redirected to the copy of the teched repository in your personal GitHub account.
- - 👉 Choose **Activate Github Actions**. This is mandatory for this session.
+> [!TIP]
+> - 👉 Choose **Create Fork**. You are now redirected to the copy of the teched repository in your personal GitHub account.
+> - 👉 Choose **Activate Github Actions**. This is mandatory for this session.
 
 ## Exercise 0.2 - The rules of the game
 
@@ -100,7 +101,7 @@ The students can pick and choose any available kyma cluster region the following
 
 You've got SSO acces with your student's credentials to parts of the SAP-TechEd25-XP264 landscape.  
 
-You may login to [SAP-TechEd25-XP264 Business Technology Platform - Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit?idp=anuk8cmfw.accounts.ondemand.com#/globalaccount/c1f19148-71f7-4883-9f86-8d5ee7634dec) 
+You may login to [SAP-TechEd25-XP264 Business Technology Platform - Cockpit](https://url.sap/yogrmc) 
 
 
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
@@ -108,7 +109,7 @@ You may login to [SAP-TechEd25-XP264 Business Technology Platform - Cockpit](htt
 <tr style="height: 193px;">
 <td style="width: 71.6%; height: 193px;">
 <div>
-<h1><a href="https://emea.cockpit.btp.cloud.sap/cockpit?idp=anuk8cmfw.accounts.ondemand.com#/globalaccount/c1f19148-71f7-4883-9f86-8d5ee7634dec"><img class="aligncenter" src="../ex0/images/SAP-TechEd25-XP264.png" alt="SAP-TechEd25-XP264" /></a></h1>
+<h1><a href="https://url.sap/yogrmc"><img class="aligncenter" src="../ex0/images/SAP-TechEd25-XP264.png" alt="SAP-TechEd25-XP264" /></a></h1>
 </div>
 </td>
 </tr>
@@ -173,57 +174,7 @@ Some of the modules are added by default (istio, api-gateway and btp-operator), 
 </tbody>
 </table> 
 
-<!-- 
-<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
-<tbody>
-<tr style="height: 193px;">
-<td style="width: 71.6%; height: 193px;">
-<div style="width: 100%; height: 600px;">
 
-<h3>Mermaid sequence diagram showing the system flow between K8s components to start a container.</h3>
-
-```mermaid 
-
----
-title: A Mermaid sequence diagram showing the system flow between K8s components to start a container.
-config:
-  look: classic
-  theme: neutral
-  themeVariables:
-    primaryColor: "#00ff00"
-  securityLevel: "loose"
----
-sequenceDiagram
-    actor me
-    participant apiSrv as control plane<br><br>api-server
-    participant etcd as control plane<br><br>etcd datastore
-    participant cntrlMgr as control plane<br><br>controller<br>manager
-    participant sched as control plane<br><br>scheduler
-    participant kubelet as node<br><br>kubelet
-    participant container as node<br><br>container<br>runtime
-
-    autonumber
-    me->>apiSrv: 1. kubectl create -f pod.yaml
-    apiSrv->>etcd: 2. save new state
-    cntrlMgr->>apiSrv: 3. check for changes
-    sched->>apiSrv: 4. watch for unassigned pods(s)
-    apiSrv->>sched: 5. notify about pod w nodename=" "
-    sched->>apiSrv: 6. assign pod to node
-    apiSrv->>etcd: 7. save new state
-    kubelet->>apiSrv: 8. look for newly assigned pod(s)
-    apiSrv->>kubelet: 9. bind pod to node
-    kubelet->>container: 10. start container
-    kubelet->>apiSrv: 11. update pod status
-    apiSrv->>etcd: 12. save new state
-```    
-
-</div>
-</td>
-</tr>
-</tbody>
-</table> 
-
---->
 
 
 ## Summary
