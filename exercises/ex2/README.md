@@ -15,15 +15,24 @@
 > [!IMPORTANT]
 > Pre-requisites:
 > - A dedicated Python Function is provided, in every single student namespace, with the replicas value set to 1 to prevent the internal Serverless HPA creation.
+> 👉 Run the provided github actions workflows to experience HPA and KEDA inspect the workflow run log.
 
-
-- 👉 run the `k8s-hpa-keda-load-generator` workflow (in a separate browser window)
+A dedicated load generator to be run in a separate browser window...  
+- 👉 run the `k8s-hpa-keda-load-generator` workflow
 - 👉 For the best experience, open the workflow link into into a new window (right click).  
 
  |  k8s HPA-KEDA load generator workflow (namespaced)
  | :---------  |
  | [ k8s-hpa-keda-load-generator](../../../../actions/workflows/k8s-hpa-keda-load-generator.yml)
 
+
+PS. The below steps are for illustration only. 
+
+- step1: nitially deployed serveless python 3.12 function with a single replica....
+- step2: Scale-out to 3 or 5 replicas 
+- step3: After a little while the HPA will be up and running:  
+- step4: scale down from 5 to 2 replicas 
+- step5: scale back to a single replica.
 
 ## Exercise 2.1 - HPA
 
@@ -35,26 +44,6 @@
  |  k8s HPA student workflow (namespaced)
  | :---------  |
  | [ k8s-hpa-student](../../../../actions/workflows/k8s-hpa-student.yml)
-
-
-The below steps are for illustration only. 
-Please use the provided github actions workflows instead and inspect the workflow run log.
-
-- step1:
-Initially deployed serveless python 3.12 function with a single replica.... no HPA in place so far:
-
-- step2:
-Scale-out to 5 replicas 
-
-- step3:  
-After a little while the HPA will be up and running:  
-
-- step4:
-scale down from 5 to 2 replicas 
-
-- step5:
-scale back to a single replica.
-
 
 
 https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-horizontalpodautoscaler-in-kubectl  
