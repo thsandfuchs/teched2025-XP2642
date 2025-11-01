@@ -755,6 +755,39 @@ Here goes a diagram of the functional architecture of the solution
 
 
 ```mermaid
+---
+title: Subscription Flow Chart
+---
+sequenceDiagram
+    participant T as Tenant Admin
+    participant BTP as SAP BTP Cockpit
+    participant SR as SaaS Registry
+    participant PA as Provider App
+    participant XSUAA as XSUAA Service
+    participant DB as Database
+    
+    T->>BTP: Access BTP Cockpit
+    T->>BTP: Navigate to Service Marketplace
+    T->>BTP: Subscribe to Multitenant App
+    BTP->>SR: Create Subscription
+    SR->>PA: Trigger onSubscription callback
+    
+    PA->>XSUAA: Create tenant-specific OAuth client
+    XSUAA-->>PA: OAuth client created
+    
+    PA->>DB: Create tenant schema/container
+    DB-->>PA: Schema created
+    
+    PA->>PA: Initialize tenant data
+    PA-->>SR: Subscription successful
+    SR-->>BTP: Subscription confirmed
+    BTP-->>T: Subscription complete
+    
+    Note over T,DB: Tenant can now access the application
+```
+
+
+```mermaid
 graph TD
     %% Define tenants and applications
     subgraph "Application Layer"
