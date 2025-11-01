@@ -437,18 +437,21 @@ Practice:
 
 ## Exercise 1.4 - Fire-fighter access to your kyma cluster
 
-There are two ways to gain access to a kyma cluster in XP264 session landscape, namely:
+As usual, in case of fire, one needs well designated escape routes!  
+
+There are mutliple ways to gain access to a kyma cluster in XP264 session landscape, namely:
+- from a kyma dashboard (console)
 - from a terminal window using the downloaded user OIDC kubeconfig with either `kubectl` and/or `kyma CLI`
-- from within a github action diagnostic workflow with the embeded terraform automation (the preferred way)
+- from within a github action diagnostic workflow that comprises the embeded terraform automation (the preferred way)
 
 
-The first method requires a kubectl oidc plugin (already pre-installed on the laptops) and cannot be performed in a headless context, for instance from a CI/CD pipeline or workflow.  
-
-You can initially download the kubeconfig from one of the links below or directly from any SAP Kyma dashboard.  
-
-* Fore convenience, here goes the table with the links to all btp and k8s resources...  
+The first two methods require a kubectl oidc plugin and cannot be performed in a headless context, for instance in a CI/CD pipeline or workflow.  
 
 > [!NOTE]
+>
+> * For convenience, here goes the table with the links to all btp and k8s resources...  
+> * You can initially download the kubeconfig from one of the links below or directly from any SAP Kyma dashboard.  
+>
 > | Region (BTP Cockpit) | Kubeconfig (download) | Console (dashboard) | Admin Worklow (cluster-wide) | Student Workflow (namespaced) | Data Collection Workflow (cluster-wide)
 > | :--------- | :---------:  | --------- | :--------- | :------- | -----------
 > | [uk-south](https://url.sap/0dd8pm) | https://url.sap/q9176k | [<img src="../landscape/uksouth/kyma-dashboard_url_uksouth.png" width="50" />](https://url.sap/x2ygbf) | [uk-south--admin](../../../../actions/workflows/uk-south-teched-7a69075f-7faf-4604-a62e-806648791dba.yml) | [uk-south--xp264](../../../../actions/workflows/uk-south-teched-7a69075f-7faf-4604-a62e-806648791dba-xp264.yml)| [ k8s-data-context](../../../../actions/workflows/k8s-data-context-teched.yml)
@@ -457,8 +460,9 @@ You can initially download the kubeconfig from one of the links below or directl
 > | [xp264-000](https://url.sap/v2dn5g) | https://url.sap/jdleyl | [<img src="../landscape/xp264-000/kyma_dashboard_url_xp264_000.png" width="50" />](https://url.sap/9waari ) | [xp264-000--admin](../../../../actions/workflows/xp264-000-teched-622af3fe-a2f5-4fdd-a05f-73e343aec2a5.yml) | [xp264-000--xp264](../../../../actions/workflows/xp264-000-teched-622af3fe-a2f5-4fdd-a05f-73e343aec2a5-xp264.yml) | [k8s-data-context](../../../../actions/workflows/k8s-data-context-teched.yml)
 > | [uk-xp264](https://url.sap/ovbfn6) |https://url.sap/tyapw7 | [<img src="../landscape/uk-xp264/kyma_dashboard_url_uk_xp264.png" width="50" />](https://url.sap/3wchu2 ) | [uk-xp264--admin](../../../../actions/workflows/uk-xp264-teched-76f46b5b-d9ab-486f-8e4f-12e1163af943.yml) | [uk-xp264--xp264](../../../../actions/workflows/uk-xp264-teched-76f46b5b-d9ab-486f-8e4f-12e1163af943-xp264.yml) | [k8s-data-context](../../../../actions/workflows/k8s-data-context-teched.yml)
 
-Good to know:  
-- Relying on a user-OIDC kubeconfig is not very convenient due to the periodic redirects that may cause timeouts, even in a terminal window.
+> [!TIP]
+> 
+> - Relying on a user-OIDC kubeconfig is not very convenient due to the periodic redirects that may cause timeouts, even if used in a terminal window.
 
 Practice:
 - 👉 Create a permenent or temporary service account based kubeconfig (with uk-south)
