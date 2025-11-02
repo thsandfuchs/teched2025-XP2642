@@ -546,6 +546,7 @@ sequenceDiagram
 
 <div>
 
+Optional practice (requires VSCode):
 
 - 👉 Let's capitalize on the student diagnostic github action that provides a service account based kubeconfig as an artifact, as follows:
 
@@ -585,6 +586,24 @@ sequenceDiagram
 
 
 - 👉 run and explore: `terraform output -json  KymaModules | jq '.[] | { name: .name, version: .version}'`
+
+
+> [!TIP]
+> The default VSCode terminal buffer size is just 1000 lines. In other words you will be able to scrollback to that limit.
+> If the terminal output is rather verbose you may want to adjust the scrollback to a bigger value, for instance:
+>
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div> 
+<h1><a href=""><img class="aligncenter" src="../ex1/images/vscode-scrollback-boost.png" alt="vscode-scrollback-boost" height="600"/></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table> 
 
 
 ## Exercise 1.6 - Subscribe to a kyma multitenant application
