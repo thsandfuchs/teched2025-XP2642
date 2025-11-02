@@ -448,7 +448,7 @@ There are mutliple ways to gain access to a kyma cluster in XP264 session landsc
 
 The first two methods require a kubectl oidc plugin and cannot be performed in a headless context, for instance in a CI/CD pipeline or workflow.  
 
-> [!NOTE]
+<!-- > [!NOTE]
 >
 > * For convenience, here goes the table with the links to all btp and k8s resources...  
 > * You can initially download the kubeconfig from one of the links below or directly from any SAP Kyma dashboard.  
@@ -460,7 +460,7 @@ The first two methods require a kubectl oidc plugin and cannot be performed in a
 > | [us-east](https://url.sap/b24wtp) | https://url.sap/57qy47 | [<img src="../landscape/useast/kyma_dashboard_url_useast.png" width="35" />](https://url.sap/ui217f) 
 > | [xp264-000](https://url.sap/v2dn5g) | https://url.sap/jdleyl | [<img src="../landscape/xp264-000/kyma_dashboard_url_xp264_000.png" width="35" />](https://url.sap/9waari ) 
 > | [uk-xp264](https://url.sap/ovbfn6) |https://url.sap/tyapw7 | [<img src="../landscape/uk-xp264/kyma_dashboard_url_uk_xp264.png" width="35" />](https://url.sap/3wchu2 ) 
-
+ -->
 
 > [!TIP]
 > 
@@ -477,7 +477,6 @@ Practice:
 [k8s-fire-fighter-student](../../../../actions/workflows/k8s-fire-fighter-student.yml) 
 
 
-
 <table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
 <tbody>
 <tr style="height: 193px;">
@@ -490,6 +489,22 @@ Practice:
 </tbody>
 </table> 
 
+👉 Download the artifacts and upload them into an empty [kyma dashboard](https://dashboard.kyma.cloud.sap/clusters)
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div> 
+<h1><a href="../../../../actions/workflows/k8s-fire-fighter-student.yml"><img class="aligncenter" src="../ex1/images/k8s-fire-fighter-student-artifacts.png" alt="artifacts" height="600"/></a></h1>
+</div>
+<div> 
+<h1><a href="https://dashboard.kyma.cloud.sap/clusters"><img class="aligncenter" src="../ex1/images/k8s-connect-cluster.png" alt="kyma dashboard" height="600"/></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table> 
 
 ## Exercise 1.5 - Terraforming kyma runtime environment
 
@@ -505,6 +520,7 @@ Accessing other diagnostic information with btp and kubernetes terraform provide
 Practice:  
 - 👉 Run the Data Collection Workflow
 
+
  |  Data Collection Workflow (namespaced)
  | :---------  |
  | [ k8s-data-context-student](../../../../actions/workflows/k8s-data-context-student.yml)
@@ -516,6 +532,8 @@ Practice:
 <td style="width: 71.6%; height: 193px;">
 
 <div>
+
+Data Collection Workflow (namespaced) sequence diagram...
 
 ```mermaid
 sequenceDiagram
@@ -529,20 +547,28 @@ sequenceDiagram
 
 </div>
 
-<div>
 
+</td>
+</tr>
+</tbody>
+</table>  
 
+Optional practice (requires VSCode):  
 - 👉 Let's capitalize on the student diagnostic github action that provides a service account based kubeconfig as an artifact, as follows:
 
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div>
 <h1><a href="../../../../actions/workflows/k8s-data-context-student.yml"><img class="aligncenter" src="images/k8s-data-context-artifacts.png" alt="" height="600"/></a></h1>
 
 </div>  
 </td>
 </tr>
 </tbody>
-</table>  
-
-
+</table> 
 
 - 👉 run: `export KUBE_CONFIG_PATH=~/Downloads/kubeconfig_sa/my-kubeconfig_sa.yaml`
 - 👉 run: `terraform init`
@@ -570,6 +596,24 @@ sequenceDiagram
 
 
 - 👉 run and explore: `terraform output -json  KymaModules | jq '.[] | { name: .name, version: .version}'`
+
+
+> [!TIP]
+> The default VSCode terminal buffer size is just 1000 lines. In other words you will be able to scrollback to that limit.
+> If the terminal output is rather verbose you may want to adjust the scrollback to a bigger value, for instance:
+>
+
+<table style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;" border="1">
+<tbody>
+<tr style="height: 193px;">
+<td style="width: 71.6%; height: 193px;">
+<div> 
+<h1><a href=""><img class="aligncenter" src="../ex1/images/vscode-scrollback-boost.png" alt="vscode-scrollback-boost" height="600"/></a></h1>
+</div>
+</td>
+</tr>
+</tbody>
+</table> 
 
 
 ## Exercise 1.6 - Subscribe to a kyma multitenant application
