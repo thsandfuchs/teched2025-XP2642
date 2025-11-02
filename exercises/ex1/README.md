@@ -517,7 +517,7 @@ Practice:
 
 <div>
 
-<h3>Accessing other diagnostic information with btp and kubernetes terraform providers....</h3>
+<h4>Accessing other diagnostic information with btp and kubernetes terraform providers....</h4>
 
 ```mermaid
 sequenceDiagram
@@ -532,8 +532,8 @@ sequenceDiagram
 
 > [!NOTE]
 > The built-in terraform automation is designed to use the very kyma cluster as its remote backend to persist the terraform state.  
-> That's extremely convient as it allows to explore the gathered information at any time time and have it processed with other tools, etc...
-> It could be, for instance, shared with the SAP Kyma support.
+> That's extremely convient as it allows to explore the gathered information at any time time and have it processed with other tools, etc...  
+> It could be, for instance, shared with the SAP Product support.
 
 
 </td>
